@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1417.62 548.89">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .06em;
+      }
+
+      .cls-2 {
+        letter-spacing: .13em;
+      }
+
+      .cls-3 {
+        letter-spacing: .12em;
+      }
+
+      .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-5 {
+        font-family: AdelleSansDevanagari-Regular, 'Adelle Sans Devanagari';
+        font-size: 100px;
+      }
+    </style>
+  </defs>
+  <g>
+    <text class="cls-5" transform="translate(338.21 326.58)"><tspan class="cls-1" x="0" y="0">F</tspan><tspan class="cls-3" x="60.4" y="0">AITH FORME</tspan><tspan class="cls-2" x="773.59" y="0">R</tspan><tspan class="cls-3" x="849.79" y="0">S</tspan></text>
+    <text class="cls-5" transform="translate(338.21 326.58)"><tspan class="cls-1" x="0" y="0">F</tspan><tspan class="cls-3" x="60.4" y="0">AITH FORME</tspan><tspan class="cls-2" x="773.59" y="0">R</tspan><tspan class="cls-3" x="849.79" y="0">S</tspan></text>
+  </g>
+  <path class="cls-4" d="M129.87,446.23c2.64-4.89-7.15,2.26-5.65-23.34s25.25-104.32,36.52-136.82c41.79-1.13,88.09-8.12,92.61-19.79-33.88,3.76-60.61.38-88.85,0,4.52-21.46,34.47-99.74,39.16-110.62,59.75-13.71,156.51-14.57,203.28-11.73-24.85-35.01-189.36-13.18-197.27-12.42,11.29-31.62,22.59-53.84,19.58-60.99-2.33,5.39-26.89,15.59-45.61,61.74-28.61,7.91-107.24,16.19-117.02,48.19-.99,3.01-2.54,13.18,3.76,12.26,14.67-2.13-18.54-17.09,105.74-34.04-3.86,14.54-39.59,107.73-39.92,108.36-19.67,1.62-59.14-1.62-65.42,21.81-.97,3.9,2.08,15.94,3.39,12.89,6.58-14.52,21.52-13.35,57.89-15.53-16.56,50.49-33.51,104.31-36.52,131.04-4.14,24.28,31.02,31.62,34.32,28.99Z"/>
+</svg>

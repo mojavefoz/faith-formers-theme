@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .13em;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        isolation: isolate;
+      }
+
+      .cls-1, .cls-5, .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        font-family: AdelleSansDevanagari-Regular, 'Adelle Sans Devanagari';
+        font-size: 100px;
+      }
+
+      .cls-3 {
+        letter-spacing: .12em;
+      }
+
+      .cls-4 {
+        letter-spacing: .06em;
+      }
+    </style>
+  </defs>
+  <g>
+    <g class="cls-2">
+      <text class="cls-4" transform="translate(85.95 797.07)"><tspan x="0" y="0">F</tspan></text>
+      <text class="cls-3" transform="translate(146.35 797.07)"><tspan x="0" y="0">AITH FORME</tspan></text>
+      <text class="cls-1" transform="translate(859.54 797.07)"><tspan x="0" y="0">R</tspan></text>
+      <text class="cls-3" transform="translate(935.74 797.07)"><tspan x="0" y="0">S</tspan></text>
+    </g>
+    <g class="cls-2">
+      <text class="cls-4" transform="translate(85.95 797.07)"><tspan x="0" y="0">F</tspan></text>
+      <text class="cls-3" transform="translate(146.35 797.07)"><tspan x="0" y="0">AITH FORME</tspan></text>
+      <text class="cls-1" transform="translate(859.54 797.07)"><tspan x="0" y="0">R</tspan></text>
+      <text class="cls-3" transform="translate(935.74 797.07)"><tspan x="0" y="0">S</tspan></text>
+    </g>
+  </g>
+  <path class="cls-5" d="M433.54,626.2c2.64-4.89-7.15,2.26-5.65-23.34s25.25-104.32,36.52-136.82c41.79-1.13,88.09-8.12,92.61-19.79-33.88,3.76-60.61.38-88.85,0,4.52-21.46,34.47-99.74,39.16-110.62,59.75-13.71,156.51-14.57,203.28-11.73-24.85-35.01-189.36-13.18-197.27-12.42,11.29-31.62,22.59-53.84,19.58-60.99-2.33,5.39-26.89,15.59-45.61,61.74-28.61,7.91-107.24,16.19-117.02,48.19-.99,3.01-2.54,13.18,3.76,12.26,14.67-2.13-18.54-17.09,105.74-34.04-3.86,14.54-39.59,107.73-39.92,108.36-19.67,1.62-59.14-1.62-65.42,21.81-.97,3.9,2.08,15.94,3.39,12.89,6.58-14.52,21.52-13.35,57.89-15.53-16.56,50.49-33.51,104.31-36.52,131.04-4.14,24.28,31.02,31.62,34.32,28.99h0Z"/>
+</svg>

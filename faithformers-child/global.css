@@ -1,0 +1,235 @@
+/**
+ * Faith Formers Child — global styles
+ * Header, footer, brand variables, Montserrat. Enqueued on all pages.
+ *
+ * @package Faith_Formers_Child
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+	--ff-cyan: #4FC3F7;
+	--ff-purple: #8B5CF6;
+	--ff-magenta: #C850C0;
+	--ff-dark: #1A1A2E;
+	--ff-deep-purple: #2D1B69;
+}
+
+/* ----- Header: fixed, nav colors, CTA button ----- */
+#masthead,
+.site-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background-color: rgba(26, 26, 46, 1) !important;
+	transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+body.admin-bar #masthead {
+	top: 32px !important;
+}
+.main-navigation a,
+.nav-primary a {
+	color: #ffffff !important;
+	font-family: 'Montserrat', sans-serif !important;
+	font-weight: 500 !important;
+	font-size: 15px !important;
+	letter-spacing: 0.5px !important;
+}
+.main-navigation a:hover {
+	color: var(--ff-cyan) !important;
+}
+.header-button-wrap a,
+.kadence-header-btn {
+	background: linear-gradient(135deg, var(--ff-cyan), var(--ff-purple), var(--ff-magenta)) !important;
+	color: #ffffff !important;
+	border-radius: 40px !important;
+	padding: 10px 24px !important;
+	font-family: 'Montserrat', sans-serif !important;
+	font-weight: 600 !important;
+	font-size: 14px !important;
+	border: none !important;
+	text-decoration: none !important;
+}
+
+/* ----- Footer ----- */
+#colophon,
+.site-footer {
+	display: none !important;
+}
+.ff-footer {
+	background: var(--ff-dark);
+	width: 100%;
+	margin: 0;
+}
+.ff-footer__top {
+	padding: 60px 40px;
+	max-width: 1400px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 3rem;
+}
+.ff-footer__logo {
+	display: block;
+	margin: 0 0 1rem;
+}
+.ff-footer__tagline {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.8;
+	color: #FFFFFF;
+	margin: 0;
+}
+.ff-footer__heading {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #FFFFFF;
+	margin: 0 0 1rem;
+}
+.ff-footer__links {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+.ff-footer__links a {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 2.2;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.ff-footer__links a:hover {
+	background: linear-gradient(90deg, var(--ff-cyan) 0%, var(--ff-purple) 50%, var(--ff-magenta) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+.ff-footer__social {
+	display: flex;
+	gap: 0.75rem;
+	margin-top: 1.25rem;
+}
+.ff-footer__social a {
+	width: 44px;
+	height: 44px;
+	border: 2px solid rgba(255, 255, 255, 0.4);
+	background: transparent;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	transition: border-color 0.2s, transform 0.2s;
+}
+.ff-footer__social a:hover {
+	border-color: #ffffff;
+	transform: scale(1.08);
+}
+.ff-footer__social a svg {
+	width: 22px;
+	height: 22px;
+}
+.ff-footer__social a svg path {
+	fill: #FFFFFF;
+}
+.ff-footer__bottom {
+	background: #111827;
+	padding: 16px 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+}
+.ff-footer__copy {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	margin: 0;
+}
+.ff-footer__legal {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.25rem;
+}
+.ff-footer__legal a {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	color: #888888;
+	text-decoration: none;
+}
+.ff-footer__legal a:hover {
+	color: #FFFFFF;
+}
+.ff-footer__legal .ff-footer__sep {
+	color: #666;
+	font-size: 12px;
+	margin: 0 0.35rem;
+}
+
+@media (max-width: 900px) {
+	.ff-footer__top {
+		grid-template-columns: 1fr;
+		padding: 40px 24px;
+	}
+	.ff-footer__bottom {
+		flex-direction: column;
+		padding: 16px 24px;
+		text-align: center;
+	}
+}
+
+/* ----- WPForms Contact Form ----- */
+#wpforms-form-58 .wpforms-field input,
+#wpforms-form-58 .wpforms-field textarea,
+#wpforms-form-58 .wpforms-field select {
+	border: 2px solid #e0e0e0 !important;
+	border-radius: 8px !important;
+	padding: 14px 18px !important;
+	font-family: Arial, sans-serif !important;
+	font-size: 16px !important;
+	color: #2D1B69 !important;
+	background-color: #F8F7FF !important;
+	width: 100% !important;
+	height: auto !important;
+	min-height: 52px !important;
+	line-height: 1.5 !important;
+	appearance: auto !important;
+	box-sizing: border-box !important;
+}
+#wpforms-form-58 .wpforms-field input:focus,
+#wpforms-form-58 .wpforms-field textarea:focus,
+#wpforms-form-58 .wpforms-field select:focus {
+	border-color: #8B5CF6 !important;
+	outline: none !important;
+	box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15) !important;
+}
+button#wpforms-submit-58 {
+	background: linear-gradient(135deg, #4FC3F7, #8B5CF6, #C850C0) !important;
+	color: white !important;
+	border: none !important;
+	border-radius: 40px !important;
+	padding: 16px 48px !important;
+	font-family: 'Montserrat', sans-serif !important;
+	font-weight: 700 !important;
+	font-size: 16px !important;
+	cursor: pointer !important;
+}
+
+/* ----- Newsletter section (Kit embed centering) ----- */
+.ff-newsletter-wrap,
+.ff-newsletter,
+.seva-form,
+[data-uid='6eb3da3edd'] {
+	margin: 0 auto !important;
+	text-align: center !important;
+	max-width: 600px !important;
+	display: block !important;
+}
