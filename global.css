@@ -51,6 +51,11 @@ body {
   color: var(--ff-ink-mid);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  padding-top: 72px;
+}
+body.admin-bar { padding-top: 104px; }
+@media screen and (max-width: 782px) {
+  body.admin-bar { padding-top: 118px; }
 }
 img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; transition: var(--transition); }
@@ -150,55 +155,136 @@ p {
 .ff-badge--mg   { background: var(--ff-mg-p);   color: #8A0050; }
 
 /* ═══════════════════════════════════════════════════════════
-   NAVIGATION
+   HEADER — universal (header.php)
    ═══════════════════════════════════════════════════════════ */
-.site-header {
-  background: rgba(245, 237, 224, .94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  position: sticky;
+.ff-header {
+  position: fixed;
   top: 0;
-  z-index: 100;
-  border-bottom: 1px solid rgba(125, 211, 192, .18);
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  min-height: 72px;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+body.admin-bar .ff-header { top: 32px; }
+@media screen and (max-width: 782px) {
+  body.admin-bar .ff-header { top: 46px; }
 }
 
-.site-header .header-inner {
+.ff-header--scrolled {
+  background: var(--ff-cream);
+  box-shadow: 0 1px 20px rgba(24, 22, 15, 0.08);
+}
+
+.ff-header__inner {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 0 var(--pad-x);
-  height: 60px;
+  height: 72px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 40px;
 }
 
-.site-header .site-logo {
+/* Logo */
+.ff-header__logo-link { flex-shrink: 0; display: flex; align-items: center; }
+.ff-header__logo-img  { height: 48px; width: auto; display: block; }
+.ff-header__logo-wordmark {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 800;
   color: var(--ff-ink);
   letter-spacing: -.5px;
 }
-.site-header .site-logo span { color: var(--ff-mg); }
+.ff-header__logo-wordmark span { color: var(--ff-mg); }
 
-.main-navigation { display: flex; gap: 32px; }
-.main-navigation a {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--ff-ink-mid);
+/* Nav */
+.ff-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-left: auto;
 }
-.main-navigation a:hover { color: var(--ff-mg); }
-
-.header-cta {
-  background: var(--ff-mg);
-  color: #fff;
-  font-size: 11px;
+.ff-header__nav-link {
+  font-family: var(--font-body);
+  font-size: 16px;
   font-weight: 600;
-  padding: 10px 24px;
-  border-radius: 100px;
-  letter-spacing: .04em;
+  color: var(--ff-ink);
+  letter-spacing: -.1px;
+  transition: color 0.2s ease;
+  white-space: nowrap;
 }
-.header-cta:hover { background: #c01575; color: #fff; }
+.ff-header__nav-link:hover,
+.ff-header__nav-link--active { color: var(--ff-mg); }
+
+/* CTA button */
+.ff-header__cta {
+  background: var(--ff-mg);
+  color: #fff !important;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 100px;
+  letter-spacing: .02em;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.ff-header__cta:hover { background: #c01575; color: #fff !important; transform: translateY(-1px); }
+
+/* Mobile hamburger toggle (hidden on desktop) */
+.ff-header__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.ff-header__toggle-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--ff-ink);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .ff-header__toggle { display: flex; }
+  .ff-header__cta    { display: none; }
+
+  .ff-header__nav {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--ff-cream);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 16px 0 24px;
+    box-shadow: 0 8px 24px rgba(24, 22, 15, 0.1);
+  }
+  .ff-header__nav--open { display: flex; }
+  .ff-header__nav-link {
+    padding: 14px var(--pad-x);
+    font-size: 18px;
+    border-bottom: 1px solid rgba(24, 22, 15, 0.06);
+  }
+  .ff-header__nav-link:last-child { border-bottom: none; }
+}
 
 /* ═══════════════════════════════════════════════════════════
    HERO
