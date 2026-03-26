@@ -13,18 +13,18 @@ $current_slug = ( $current_cat && isset( $current_cat->slug ) ) ? $current_cat->
 ?>
 
 <style type="text/css">
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
-.ff-archive-page { font-family: Arial, sans-serif; color: #555555; margin: 0; padding: 0; width: 100%; }
-.ff-archive-page h1, .ff-archive-page h2 { font-family: 'Montserrat', sans-serif; }
+.ff-archive-page { font-family: 'Instrument Sans', sans-serif; color: #4A4740; margin: 0; padding: 0; width: 100%; }
+.ff-archive-page h1, .ff-archive-page h2 { font-family: 'Instrument Sans', sans-serif; }
 
 /* Header (match other templates) */
-#masthead, .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background-color: rgba(26, 26, 46, 1) !important; transition: background-color 0.3s ease, backdrop-filter 0.3s ease; }
+#masthead, .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background-color: rgba(24, 22, 15, 1) !important; transition: background-color 0.3s ease, backdrop-filter 0.3s ease; }
 body.admin-bar #masthead { top: 32px !important; }
 body.admin-bar .ff-archive-header { padding-top: 112px !important; }
-.main-navigation a, .nav-primary a { color: #ffffff !important; font-family: 'Montserrat', sans-serif !important; font-weight: 500 !important; font-size: 15px !important; letter-spacing: 0.5px !important; }
-.main-navigation a:hover { color: #4FC3F7 !important; }
-.header-button-wrap a, .kadence-header-btn { background: linear-gradient(135deg, #4FC3F7, #8B5CF6, #C850C0) !important; color: #ffffff !important; border-radius: 40px !important; padding: 10px 24px !important; font-family: 'Montserrat', sans-serif !important; font-weight: 600 !important; font-size: 14px !important; border: none !important; text-decoration: none !important; }
+.main-navigation a, .nav-primary a { color: #ffffff !important; font-family: 'Instrument Sans', sans-serif !important; font-weight: 500 !important; font-size: 15px !important; letter-spacing: 0.5px !important; }
+.main-navigation a:hover { color: #7DD3C0 !important; }
+.header-button-wrap a, .kadence-header-btn { background: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C) !important; color: #ffffff !important; border-radius: 40px !important; padding: 10px 24px !important; font-family: 'Instrument Sans', sans-serif !important; font-weight: 600 !important; font-size: 14px !important; border: none !important; text-decoration: none !important; }
 
 /* Page header */
 .ff-archive-header {
@@ -34,18 +34,18 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 }
 .ff-archive-header__inner { max-width: 1200px; margin: 0 auto; }
 .ff-archive-header__title {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 64px;
 	font-weight: 900;
-	color: #2D1B69;
+	color: #18160F;
 	margin: 0 0 0.5rem;
 	letter-spacing: 0.5px;
 }
 .ff-archive-header__desc {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 18px;
 	line-height: 1.7;
-	color: #555555;
+	color: #4A4740;
 	margin: 0 0 1.5rem;
 }
 .ff-archive-header__desc:empty { display: none; }
@@ -58,27 +58,27 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 	display: inline-block;
 	padding: 10px 22px;
 	border-radius: 40px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-weight: 600;
 	font-size: 14px;
 	text-decoration: none;
 	transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 .ff-archive-pill--active {
-	background: #2D1B69;
+	background: #18160F;
 	color: #ffffff;
-	border: 2px solid #2D1B69;
+	border: 2px solid #18160F;
 }
 .ff-archive-pill--inactive {
 	background: #ffffff;
-	color: #2D1B69;
-	border: 2px solid #2D1B69;
+	color: #18160F;
+	border: 2px solid #18160F;
 }
-.ff-archive-pill--inactive:hover { background: #F5F5F7; }
+.ff-archive-pill--inactive:hover { background: #F5EDE0; }
 
 /* Main + sidebar layout — wrapper uses inline flex; 70% main, 28% sidebar */
 .ff-archive-grid-wrap {
-	background: #F5F5F7;
+	background: #F5EDE0;
 	padding: 80px 0;
 }
 .ff-archive-main { min-width: 0; flex-shrink: 0; }
@@ -112,7 +112,7 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 	display: inline-block;
 	padding: 4px 12px;
 	border-radius: 20px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 11px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -120,38 +120,38 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 	margin-bottom: 0.5rem;
 	align-self: flex-start;
 }
-.ff-archive-card__cat--parish { background: rgba(79, 195, 247, 0.2); color: #2D1B69; }
-.ff-archive-card__cat--home { background: rgba(139, 92, 246, 0.2); color: #2D1B69; }
-.ff-archive-card__cat--heart { background: rgba(200, 80, 192, 0.2); color: #2D1B69; }
+.ff-archive-card__cat--parish { background: rgba(125, 211, 192, 0.2); color: #18160F; }
+.ff-archive-card__cat--home { background: rgba(0, 191, 255, 0.2); color: #18160F; }
+.ff-archive-card__cat--heart { background: rgba(233, 30, 140, 0.2); color: #18160F; }
 .ff-archive-card__date {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 13px;
-	color: #888888;
+	color: #9A9488;
 	margin: 0 0 0.5rem;
 }
 .ff-archive-card__title {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 22px;
 	font-weight: 700;
-	color: #2D1B69;
+	color: #18160F;
 	margin: 0 0 0.5rem;
 	line-height: 1.3;
 }
 .ff-archive-card__title a { color: inherit; text-decoration: none; }
 .ff-archive-card__title a:hover { text-decoration: underline; }
 .ff-archive-card__excerpt {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 16px;
 	line-height: 1.7;
-	color: #555555;
+	color: #4A4740;
 	margin: 0 0 1rem;
 	flex: 1;
 }
 .ff-archive-card__link {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 15px;
 	font-weight: 600;
-	color: #2D1B69;
+	color: #18160F;
 	text-decoration: none;
 }
 .ff-archive-card__link:hover { text-decoration: underline; }
@@ -170,20 +170,20 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 	display: inline-block;
 	margin: 0 0.5rem;
 	padding: 10px 20px;
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 15px;
-	color: #2D1B69;
+	color: #18160F;
 	text-decoration: none;
 	border-radius: 8px;
 	background: #ffffff;
 	border: 1px solid #ddd;
 }
-.ff-archive-pagination a:hover { background: #F5F5F7; border-color: #2D1B69; }
-.ff-archive-pagination .current { background: #2D1B69; color: #ffffff; border-color: #2D1B69; }
+.ff-archive-pagination a:hover { background: #F5EDE0; border-color: #18160F; }
+.ff-archive-pagination .current { background: #18160F; color: #ffffff; border-color: #18160F; }
 
 /* Newsletter CTA */
 .ff-archive-newsletter {
-	background: linear-gradient(135deg, #4FC3F7, #8B5CF6, #C850C0);
+	background: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C);
 	padding: 80px 24px;
 }
 .ff-archive-newsletter__inner {
@@ -192,14 +192,14 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 	text-align: center;
 }
 .ff-archive-newsletter__title {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 36px;
 	font-weight: 700;
 	color: #FFFFFF;
 	margin: 0 0 0.5rem;
 }
 .ff-archive-newsletter__text {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 18px;
 	line-height: 1.7;
 	color: rgba(255,255,255,0.95);
@@ -218,26 +218,26 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 .ff-archive-sidebar__section { margin-bottom: 2rem; }
 .ff-archive-sidebar__section:last-child { margin-bottom: 0; }
 .ff-archive-sidebar__heading {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	color: #2D1B69;
+	color: #18160F;
 	margin: 0 0 1rem;
 }
 .ff-archive-sidebar__cats { list-style: none; margin: 0; padding: 0; }
 .ff-archive-sidebar__cats li { margin: 0 0 0.6rem; padding: 0; display: flex; align-items: center; gap: 0.5rem; }
 .ff-archive-sidebar__cats li::before { content: ''; width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-.ff-archive-sidebar__cats li.ff-archive-sidebar__cat--parish::before { background: #4FC3F7; }
-.ff-archive-sidebar__cats li.ff-archive-sidebar__cat--home::before { background: #8B5CF6; }
-.ff-archive-sidebar__cats li.ff-archive-sidebar__cat--heart::before { background: #C850C0; }
+.ff-archive-sidebar__cats li.ff-archive-sidebar__cat--parish::before { background: #7DD3C0; }
+.ff-archive-sidebar__cats li.ff-archive-sidebar__cat--home::before { background: #00BFFF; }
+.ff-archive-sidebar__cats li.ff-archive-sidebar__cat--heart::before { background: #E91E8C; }
 .ff-archive-sidebar__cats a {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 17px;
 	font-weight: 600;
 	line-height: 2.2;
-	color: #2D1B69;
+	color: #18160F;
 	text-decoration: none;
 }
 .ff-archive-sidebar__cats a:hover { text-decoration: underline; }
@@ -251,11 +251,11 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 	padding: 6px 16px;
 	margin: 4px;
 	border-radius: 30px;
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 13px;
 	font-weight: 600;
 	color: #ffffff;
-	background: linear-gradient(135deg, #4FC3F7, #8B5CF6, #C850C0);
+	background: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C);
 	text-decoration: none;
 	transition: opacity 0.2s;
 }
@@ -321,7 +321,7 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 									<?php if ( $img ) : ?>
 										<img src="<?php echo esc_url( $img ); ?>" alt="" style="width:100%;height:260px;object-fit:cover;" loading="lazy">
 									<?php else : ?>
-										<div style="width:100%;height:260px;background:linear-gradient(135deg,#4FC3F7,#8B5CF6,#C850C0);display:flex;align-items:center;justify-content:center;"><span style="font-family:Georgia;font-size:64px;color:white;opacity:0.5;">F</span></div>
+										<div style="width:100%;height:260px;background:linear-gradient(135deg,#7DD3C0,#00BFFF,#E91E8C);display:flex;align-items:center;justify-content:center;"><span style="font-family:'Instrument Sans',sans-serif;font-size:64px;color:white;opacity:0.5;">F</span></div>
 									<?php endif; ?>
 								</div>
 								<div class="ff-archive-card__body">
@@ -372,7 +372,7 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 							endforeach;
 						else :
 							?>
-							<span style="font-size:14px;color:#888;">No tags yet.</span>
+							<span style="font-size:14px;color:#9A9488;">No tags yet.</span>
 						<?php endif; ?>
 					</div>
 				</div>
@@ -403,10 +403,10 @@ window.addEventListener('scroll', function() {
 	var header = document.getElementById('masthead') || document.querySelector('.site-header');
 	if (!header) return;
 	if (window.scrollY > 80) {
-		header.style.backgroundColor = 'rgba(26, 26, 46, 0.7)';
+		header.style.backgroundColor = 'rgba(24, 22, 15, 0.7)';
 		header.style.backdropFilter = 'blur(10px)';
 	} else {
-		header.style.backgroundColor = 'rgba(26, 26, 46, 1)';
+		header.style.backgroundColor = 'rgba(24, 22, 15, 1)';
 		header.style.backdropFilter = 'none';
 	}
 });

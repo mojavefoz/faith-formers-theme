@@ -10,9 +10,9 @@ get_header();
 ?>
 
 <style type="text/css">
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
-.ff-contact-page { font-family: Arial, sans-serif; color: #555555; margin: 0; padding: 0; width: 100%; }
+.ff-contact-page { font-family: 'Instrument Sans', sans-serif; color: #4A4740; margin: 0; padding: 0; width: 100%; }
 body.admin-bar .ff-contact-hero { padding-top: 112px !important; }
 
 /* Hero — 60vh, brand gradient, centered white text */
@@ -25,11 +25,11 @@ body.admin-bar .ff-contact-hero { padding-top: 112px !important; }
 	text-align: center;
 	padding: 80px 24px 60px;
 	box-sizing: border-box;
-	background: linear-gradient(135deg, #4FC3F7, #8B5CF6, #C850C0);
+	background: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C);
 }
 .ff-contact-hero__inner { max-width: 720px; }
 .ff-contact-hero__headline {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 72px;
 	font-weight: 900;
 	line-height: 1.15;
@@ -37,7 +37,7 @@ body.admin-bar .ff-contact-hero { padding-top: 112px !important; }
 	margin: 0 0 1rem;
 }
 .ff-contact-hero__sub {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 20px;
 	line-height: 1.6;
 	color: #FFFFFF;
@@ -64,10 +64,10 @@ body.admin-bar .ff-contact-hero { padding-top: 112px !important; }
 
 /* Right column — What to expect */
 .ff-contact-expect__heading {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 36px;
 	font-weight: 700;
-	color: #2D1B69;
+	color: #18160F;
 	margin: 0 0 1.5rem;
 }
 .ff-contact-expect__list { list-style: none; margin: 0; padding: 0; }
@@ -76,10 +76,10 @@ body.admin-bar .ff-contact-hero { padding-top: 112px !important; }
 	align-items: flex-start;
 	gap: 1rem;
 	margin-bottom: 1.25rem;
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 17px;
 	line-height: 1.6;
-	color: #555555;
+	color: #4A4740;
 }
 .ff-contact-expect__item::before {
 	content: '';
@@ -87,13 +87,13 @@ body.admin-bar .ff-contact-hero { padding-top: 112px !important; }
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
-	background: linear-gradient(135deg, #4FC3F7, #8B5CF6, #C850C0);
+	background: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C);
 	margin-top: 0.5rem;
 }
 
-/* Three reason cards — light gray bg */
+/* Three reason cards — light cream bg */
 .ff-contact-cards {
-	background: #F5F5F7;
+	background: #F5EDE0;
 	padding: 80px 24px;
 }
 .ff-contact-cards__inner {
@@ -123,7 +123,7 @@ body.admin-bar .ff-contact-hero { padding-top: 112px !important; }
 	height: 56px;
 	margin: 0 auto 1.25rem;
 	border-radius: 50%;
-	background: linear-gradient(135deg, #4FC3F7, #8B5CF6, #C850C0);
+	background: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -131,17 +131,17 @@ body.admin-bar .ff-contact-hero { padding-top: 112px !important; }
 .ff-contact-card__icon svg { width: 28px; height: 28px; }
 .ff-contact-card__icon svg path { fill: #ffffff; }
 .ff-contact-card__title {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 20px;
 	font-weight: 700;
-	color: #2D1B69;
+	color: #18160F;
 	margin: 0 0 0.75rem;
 }
 .ff-contact-card__text {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 16px;
 	line-height: 1.7;
-	color: #555555;
+	color: #4A4740;
 	margin: 0;
 }
 

@@ -10,10 +10,12 @@ get_header();
 ?>
 
 <style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
 html { scroll-behavior: smooth; }
-html, body { margin: 0; padding: 0; background-color: #ffffff; }
-.ff-page { font-family: Arial, sans-serif; color: #555555; margin: 0; padding: 0; width: 100%; }
-.ff-page h1, .ff-page h2, .ff-page h3 { font-family: 'Montserrat', sans-serif; font-weight: 600; }
+html, body { margin: 0; padding: 0; background-color: #F5EDE0; }
+.ff-page { font-family: 'Instrument Sans', sans-serif; color: #4A4740; margin: 0; padding: 0; width: 100%; }
+.ff-page h1, .ff-page h2, .ff-page h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; }
 body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 
 /* About Hero — full viewport, brand gradient, Faith Formers led, no photo */
@@ -27,7 +29,7 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	text-align: center;
 	padding: 80px 24px 80px;
 	box-sizing: border-box;
-	background: linear-gradient(135deg, #4FC3F7, #8B5CF6, #C850C0);
+	background: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C);
 }
 .ff-about-hero__content {
 	position: relative;
@@ -35,7 +37,7 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	max-width: 650px;
 }
 .ff-about-hero__label {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 16px;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -44,7 +46,7 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	margin: 0 0 1rem;
 }
 .ff-about-hero__headline {
-	font-family: Georgia, serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: clamp(50px, 6vw, 96px);
 	font-weight: 700;
 	line-height: 1.15;
@@ -52,7 +54,7 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	margin: 0 0 1.5rem;
 }
 .ff-about-hero__subtext {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 22px;
 	line-height: 1.9;
 	color: #FFFFFF;
@@ -74,24 +76,24 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 .ff-about-mission__accent {
 	width: 60px;
 	height: 4px;
-	background: linear-gradient(90deg, #4FC3F7, #8B5CF6, #C850C0);
+	background: linear-gradient(90deg, #7DD3C0, #00BFFF, #E91E8C);
 	margin: 0 auto 2rem;
 	border-radius: 2px;
 }
 .ff-about-mission__quote {
-	font-family: Georgia, serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 36px;
 	font-style: italic;
 	line-height: 1.5;
-	color: #2D1B69;
+	color: #18160F;
 	margin: 0 auto 2rem;
 	max-width: 800px;
 }
 .ff-about-mission__text {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 20px;
 	line-height: 1.9;
-	color: #2D1B69;
+	color: #18160F;
 	font-weight: 500;
 	margin: 0 auto;
 	max-width: 680px;
@@ -103,12 +105,12 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	width: 100%;
 	height: 400px;
 	border-radius: 16px;
-	background: #F5F5F7;
+	background: #F5EDE0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #888;
-	font-family: Arial, sans-serif;
+	color: #9A9488;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 14px;
 	text-align: center;
 	margin-bottom: 0;
@@ -135,7 +137,7 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	width: 100%;
 	height: 100%;
 	min-height: 520px;
-	background: #F5F5F7;
+	background: #F5EDE0;
 }
 .ff-about-story__block:not(.ff-about-story__block--reverse) .ff-about-story__img-placeholder { border-radius: 0 16px 16px 0; }
 .ff-about-story__content-wrap {
@@ -145,24 +147,24 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	justify-content: center;
 }
 .ff-about-story__content h2 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 48px;
 	font-weight: 700;
 	letter-spacing: 0.5px;
-	color: #2D1B69;
+	color: #18160F;
 	margin: 0 0 1.5rem;
 }
 .ff-about-story__content p {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 20px;
 	line-height: 1.9;
-	color: #555555;
+	color: #4A4740;
 	margin: 0 0 1.25rem;
 }
 .ff-about-story__content p:last-child { margin-bottom: 0; }
 .ff-about-story__block--stat .ff-about-story__content p {
 	font-size: 22px;
-	color: #2D1B69;
+	color: #18160F;
 	font-weight: 600;
 	line-height: 1.9;
 }
@@ -171,45 +173,45 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	padding: 1rem 0;
 }
 .ff-about-story__stat-value {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 120px;
 	font-weight: 900;
 	line-height: 1;
 	letter-spacing: 0.5px;
-	background: linear-gradient(135deg, #4FC3F7, #8B5CF6, #C850C0);
+	background: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	margin: 0 0 0.5rem;
 }
 .ff-about-story__stat-label {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 18px;
 	font-weight: 600;
 	line-height: 1.9;
-	color: #2D1B69;
+	color: #18160F;
 	margin: 0;
 }
 
 /* Her Work — larger cards, 80px icons, more padding */
 .ff-about-work {
-	background: #F5F5F7;
+	background: #F5EDE0;
 	padding: 120px 24px;
 }
 .ff-about-work__heading {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 58px;
 	font-weight: 700;
 	letter-spacing: 0.5px;
-	color: #2D1B69;
+	color: #18160F;
 	text-align: center;
 	margin: 0 0 1rem;
 }
 .ff-about-work__intro {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 20px;
 	line-height: 1.9;
-	color: #555555;
+	color: #4A4740;
 	text-align: center;
 	max-width: 700px;
 	margin: 0 auto 4rem;
@@ -234,33 +236,33 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
-	background: linear-gradient(135deg, #4FC3F7, #8B5CF6, #C850C0);
+	background: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C);
 	margin-bottom: 1.5rem;
 	flex-shrink: 0;
 }
 .ff-about-work__title {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 26px;
 	font-weight: 700;
 	letter-spacing: 0.5px;
-	color: #2D1B69;
+	color: #18160F;
 	margin: 0 0 0.75rem;
 }
 .ff-about-work__desc {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 17px;
 	line-height: 1.9;
-	color: #555555;
+	color: #4A4740;
 	margin: 0;
 }
 
 /* The Vision — full-width stacked cards, watermark name left, content right */
 .ff-about-vision {
-	background: #2D1B69;
+	background: #18160F;
 	padding: 120px 24px;
 }
 .ff-about-vision__heading {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 58px;
 	font-weight: 700;
 	letter-spacing: 0.5px;
@@ -269,7 +271,7 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	margin: 0 0 1rem;
 }
 .ff-about-vision__text {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 20px;
 	line-height: 1.9;
 	color: rgba(255,255,255,0.95);
@@ -295,14 +297,14 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	position: relative;
 	overflow: hidden;
 }
-.ff-about-vision__card--active { background: rgba(79, 195, 247, 0.12); }
+.ff-about-vision__card--active { background: rgba(125, 211, 192, 0.12); }
 .ff-about-vision__card-watermark {
 	position: absolute;
 	inset: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 77px;
 	font-weight: 800;
 	line-height: 1.1;
@@ -325,19 +327,19 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	position: absolute;
 	top: 0;
 	right: 0;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 12px;
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	color: #ffffff;
-	background: linear-gradient(135deg, #4FC3F7, #8B5CF6, #C850C0);
+	background: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C);
 	padding: 8px 18px;
 	border-radius: 40px;
 }
 .ff-about-vision__card-title {
 	display: block;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 29px;
 	font-weight: 700;
 	letter-spacing: 0.5px;
@@ -346,7 +348,7 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 }
 .ff-about-vision__card-tag {
 	display: block;
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 15px;
 	line-height: 1.5;
 	color: rgba(255,255,255,0.9);
@@ -355,12 +357,12 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 
 /* Retreat CTA — larger button + reassurance line */
 .ff-about-cta {
-	background: linear-gradient(135deg, #4FC3F7, #8B5CF6, #C850C0);
+	background: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C);
 	padding: 100px 24px;
 	text-align: center;
 }
 .ff-about-cta__heading {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 48px;
 	font-weight: 700;
 	letter-spacing: 0.5px;
@@ -368,7 +370,7 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	margin: 0 0 1rem;
 }
 .ff-about-cta__text {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 20px;
 	line-height: 1.9;
 	color: rgba(255,255,255,0.95);
@@ -378,8 +380,8 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 .ff-about-cta__btn {
 	display: inline-block;
 	background: #FFFFFF;
-	color: #2D1B69;
-	font-family: 'Montserrat', sans-serif;
+	color: #18160F;
+	font-family: 'Instrument Sans', sans-serif;
 	font-weight: 600;
 	font-size: 18px;
 	letter-spacing: 0.5px;
@@ -388,9 +390,9 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	text-decoration: none;
 	transition: opacity 0.2s;
 }
-.ff-about-cta__btn:hover { opacity: 0.92; color: #2D1B69; }
+.ff-about-cta__btn:hover { opacity: 0.92; color: #18160F; }
 .ff-about-cta__reassurance {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 17px;
 	line-height: 1.9;
 	color: rgba(255,255,255,0.9);

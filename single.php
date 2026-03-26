@@ -22,9 +22,9 @@ while ( have_posts() ) :
 	$read_mins  = max( 1, (int) ceil( $word_count / 200 ) );
 ?>
 <style type="text/css">
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
-.ff-single-page { font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%; }
+.ff-single-page { font-family: 'Instrument Sans', sans-serif; margin: 0; padding: 0; width: 100%; }
 body.admin-bar .ff-single-hero { padding-top: calc(50vh * 0.5 + 32px) !important; }
 
 /* Hero — 50vh, featured image or gradient, overlay */
@@ -39,7 +39,7 @@ body.admin-bar .ff-single-hero { padding-top: calc(50vh * 0.5 + 32px) !important
 	text-align: center;
 	padding: 100px 24px 60px;
 	box-sizing: border-box;
-	background: linear-gradient(135deg, #4FC3F7, #8B5CF6, #C850C0);
+	background: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C);
 	background-size: cover;
 	background-position: center;
 }
@@ -57,7 +57,7 @@ body.admin-bar .ff-single-hero { padding-top: calc(50vh * 0.5 + 32px) !important
 	display: inline-block;
 	padding: 6px 16px;
 	border-radius: 24px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 12px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -65,11 +65,11 @@ body.admin-bar .ff-single-hero { padding-top: calc(50vh * 0.5 + 32px) !important
 	color: #ffffff;
 	margin-bottom: 1rem;
 }
-.ff-single-hero__pill--parish { background: rgba(79, 195, 247, 0.9); }
-.ff-single-hero__pill--home { background: rgba(139, 92, 246, 0.9); }
-.ff-single-hero__pill--heart { background: rgba(200, 80, 192, 0.9); }
+.ff-single-hero__pill--parish { background: rgba(125, 211, 192, 0.9); }
+.ff-single-hero__pill--home { background: rgba(0, 191, 255, 0.9); }
+.ff-single-hero__pill--heart { background: rgba(233, 30, 140, 0.9); }
 .ff-single-hero__title {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 56px;
 	font-weight: 900;
 	line-height: 1.15;
@@ -77,7 +77,7 @@ body.admin-bar .ff-single-hero { padding-top: calc(50vh * 0.5 + 32px) !important
 	margin: 0 0 0.75rem;
 }
 .ff-single-hero__meta {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 14px;
 	color: rgba(255, 255, 255, 0.9);
 	margin: 0;
@@ -94,34 +94,34 @@ body.admin-bar .ff-single-hero { padding-top: calc(50vh * 0.5 + 32px) !important
 }
 .ff-single-content__inner,
 .ff-single-content__inner p {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 20px;
 	line-height: 2.0;
-	color: #333333;
+	color: #18160F;
 }
 .ff-single-content__inner h1,
 .ff-single-content__inner h2,
 .ff-single-content__inner h3,
 .ff-single-content__inner h4 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-weight: 700;
-	color: #2D1B69;
+	color: #18160F;
 }
 .ff-single-content__inner blockquote {
 	border-left: 4px solid;
-	border-image: linear-gradient(135deg, #4FC3F7, #8B5CF6, #C850C0) 1;
+	border-image: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C) 1;
 	padding-left: 24px;
 	margin: 2rem 0;
-	font-family: Georgia, serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 22px;
 	font-style: italic;
-	color: #2D1B69;
+	color: #18160F;
 	line-height: 1.6;
 }
 
 /* Author bio */
 .ff-single-author {
-	background: #F5F5F7;
+	background: #F5EDE0;
 	border-radius: 16px;
 	padding: 40px;
 	max-width: 780px;
@@ -137,34 +137,34 @@ body.admin-bar .ff-single-hero { padding-top: calc(50vh * 0.5 + 32px) !important
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
-	background: linear-gradient(135deg, #4FC3F7, #8B5CF6, #C850C0);
+	background: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C);
 	flex-shrink: 0;
 }
 .ff-single-author__text { flex: 1; min-width: 0; }
 .ff-single-author__name {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 20px;
 	font-weight: 700;
-	color: #2D1B69;
+	color: #18160F;
 	margin: 0 0 0.25rem;
 }
 .ff-single-author__title {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 16px;
-	color: #555555;
+	color: #4A4740;
 	margin: 0 0 0.75rem;
 }
 .ff-single-author__bio {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 16px;
 	line-height: 1.8;
-	color: #555555;
+	color: #4A4740;
 	margin: 0;
 }
 
 /* Newsletter CTA */
 .ff-single-newsletter {
-	background: linear-gradient(135deg, #4FC3F7, #8B5CF6, #C850C0);
+	background: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C);
 	padding: 80px 24px;
 }
 .ff-single-newsletter__inner {
@@ -173,14 +173,14 @@ body.admin-bar .ff-single-hero { padding-top: calc(50vh * 0.5 + 32px) !important
 	text-align: center;
 }
 .ff-single-newsletter__title {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 36px;
 	font-weight: 700;
 	color: #FFFFFF;
 	margin: 0 0 0.5rem;
 }
 .ff-single-newsletter__text {
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 	font-size: 18px;
 	line-height: 1.7;
 	color: rgba(255, 255, 255, 0.95);
