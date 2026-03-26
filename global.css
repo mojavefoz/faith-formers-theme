@@ -328,14 +328,19 @@ p {
    ABOUT ANNA
    ═══════════════════════════════════════════════════════════ */
 .ff-anna {
-  display: grid;
-  grid-template-columns: 1fr 480px;
-  align-items: stretch;
   overflow: hidden;
 }
 
+.ff-anna__inner {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .ff-anna__text {
-  padding: clamp(64px, 8vw, 96px) clamp(48px, 6vw, 80px) clamp(64px, 8vw, 96px) var(--pad-x);
+  padding: clamp(64px, 8vw, 96px) clamp(48px, 6vw, 80px) clamp(64px, 8vw, 96px) 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -756,7 +761,7 @@ p {
     grid-template-columns: 1fr 320px;
     gap: 40px;
   }
-  .ff-anna {
+  .ff-anna__inner {
     grid-template-columns: 1fr 380px;
   }
   .ff-guide {
@@ -780,7 +785,7 @@ p {
   }
   .ff-path-row--flip { direction: ltr; }
 
-  .ff-anna {
+  .ff-anna__inner {
     grid-template-columns: 1fr;
   }
   .ff-anna__text { padding: 56px var(--pad-x); }

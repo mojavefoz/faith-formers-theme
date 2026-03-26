@@ -110,6 +110,7 @@ get_header(); ?>
        ABOUT ANNA
   ═══════════════════════════════════════ -->
   <section class="ff-anna">
+    <div class="ff-anna__inner">
     <div class="ff-anna__text">
       <p class="ff-eyebrow ff-eyebrow--mg">Meet your guide</p>
       <h2>Hi, I'm <em>Anna.</em></h2>
@@ -135,6 +136,7 @@ get_header(); ?>
       <?php endif; ?>
       <div class="ff-anna__photo-accent"></div>
     </div>
+    </div><!-- /.ff-anna__inner -->
   </section>
 
   <!-- ═══════════════════════════════════════
