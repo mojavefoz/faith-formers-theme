@@ -73,5 +73,15 @@ function faithformers_customize_featured_resource( $wp_customize ) {
 		'section' => 'faithformers_featured_resource',
 		'type'    => 'textarea',
 	) );
+
+	$wp_customize->add_setting( 'ff_featured_resource_url', array(
+		'default'           => '#',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control( 'ff_featured_resource_url', array(
+		'label'   => __( 'Button URL', 'faithformers' ),
+		'section' => 'faithformers_featured_resource',
+		'type'    => 'url',
+	) );
 }
 add_action( 'customize_register', 'faithformers_customize_featured_resource' );

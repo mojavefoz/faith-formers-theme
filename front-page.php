@@ -142,30 +142,13 @@ get_header(); ?>
   <!-- ═══════════════════════════════════════
        GET THE GUIDE
   ═══════════════════════════════════════ -->
-  <section class="ff-guide" id="ff-guide">
-    <div class="ff-guide__left">
-      <p class="ff-eyebrow" style="color:rgba(255,255,255,.4);">Free resource</p>
+  <section class="ff-guide" id="ff-guide" style="background:none;display:block;">
+    <div style="background:#E91E8C;max-width:1200px;margin:0 auto;border-radius:16px;padding:64px 80px;">
+      <p class="ff-eyebrow" style="color:#FFFFFF;font-weight:700;opacity:1;">Free resource</p>
       <h2><?php echo esc_html( get_theme_mod( 'ff_featured_resource_title', 'Our One-Hour Retreat' ) ); ?></h2>
-      <p class="ff-guide__sub"><?php echo esc_html( get_theme_mod( 'ff_featured_resource_desc', 'A retreat guide rooted in Lectio Divina — for anyone who wants a prayer life that actually holds. Yours free when you join.' ) ); ?></p>
-
-      <?php if ( shortcode_exists('ff_email_signup') ) :
-        echo do_shortcode('[ff_email_signup]');
-      else : ?>
-        <form class="ff-guide__form" action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
-          <?php wp_nonce_field('ff_signup','ff_nonce'); ?>
-          <input type="hidden" name="action" value="ff_email_signup">
-          <div class="ff-guide__form-row">
-            <input type="email" name="email" class="ff-guide__input" placeholder="Your email address" required>
-            <button type="submit" class="ff-guide__btn">Send it →</button>
-          </div>
-        </form>
-      <?php endif; ?>
-
-      <p class="ff-guide__fine">No spam. Unsubscribe anytime.</p>
-      <p class="ff-guide__dm">Or DM <strong>HEART</strong> on Instagram for instant access.</p>
-    </div>
-    <div class="ff-guide__right" aria-hidden="true">
-      <div class="ff-guide__right-title">Listen-<br>ing<br><span>With the<br>Heart</span></div>
+      <p class="ff-guide__sub" style="color:#FFFFFF;font-weight:600;opacity:1;"><?php echo esc_html( get_theme_mod( 'ff_featured_resource_desc', 'A retreat guide rooted in Lectio Divina — for anyone who wants a prayer life that actually holds. Yours free when you join.' ) ); ?></p>
+      <a href="<?php echo esc_url( get_theme_mod( 'ff_featured_resource_url', '#' ) ); ?>" style="display:inline-block;background:#FFFFFF;color:#E91E8C;font-family:'Instrument Sans',sans-serif;font-size:16px;font-weight:700;border-radius:100px;padding:16px 40px;text-decoration:none;transition:opacity 0.2s;">Get the Free Retreat Guide</a>
+      <p class="ff-guide__dm" style="color:#FFFFFF;font-weight:600;">Or DM <strong>HEART</strong> on Instagram for instant access.</p>
     </div>
   </section>
 
