@@ -813,3 +813,12 @@ p {
     text-align: center;
   }
 }
+
+/* ── Archive heading consistency (Resources + category pages) ──────────────
+   home.php uses Montserrat + #2D1B69; category.php uses #18160F.
+   Override both to match: Instrument Sans, weight 900, #1A1A2E.           */
+.ff-archive-header__title {
+  font-family: 'Instrument Sans', sans-serif !important;
+  font-weight: 900 !important;
+  color: #1A1A2E !important;
+}

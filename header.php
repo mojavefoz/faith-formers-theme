@@ -7,25 +7,32 @@
 <?php wp_head(); ?>
 <style>
 /* ── Faith Formers universal header ── */
-body { padding-top: 72px; }
-body.admin-bar { padding-top: 104px; }
-body.admin-bar #ff-header { top: 32px; }
-@media screen and (max-width: 782px) {
-  body.admin-bar { padding-top: 118px; }
-  body.admin-bar #ff-header { top: 46px; }
-}
 #ff-header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   height: 72px;
+  background: #FAF7F2;
+  box-shadow: 0 1px 0 rgba(0,0,0,.08);
+  transition: all 0.3s ease;
+}
+body.admin-bar #ff-header { top: 32px; }
+@media screen and (max-width: 782px) {
+  body.admin-bar #ff-header { top: 46px; }
+}
+
+/* Homepage: transparent at top, cream after 80px scroll */
+body.home #ff-header {
   background: transparent;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
 }
-#ff-header.scrolled {
-  background: #F5EDE0;
-  box-shadow: 0 1px 20px rgba(24,22,15,.08);
+body.home #ff-header.scrolled {
+  background: #FAF7F2;
+  box-shadow: 0 1px 0 rgba(0,0,0,.08);
 }
+
 .ff-header-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -35,23 +42,39 @@ body.admin-bar #ff-header { top: 32px; }
   align-items: center;
   gap: 40px;
 }
+
+/* Logo */
 .ff-header-logo { flex-shrink: 0; display: flex; align-items: center; text-decoration: none; }
 .ff-header-logo img { height: 48px; width: auto; display: block; }
+.ff-logo-light { display: none; }
+.ff-logo-dark  { display: block; }
+/* Homepage transparent: swap to white logo */
+body.home #ff-header:not(.scrolled) .ff-logo-light { display: block; }
+body.home #ff-header:not(.scrolled) .ff-logo-dark  { display: none; }
+
 .ff-header-logo-text {
   font-family: 'Instrument Sans', sans-serif;
   font-size: 22px; font-weight: 800;
-  color: #18160F; letter-spacing: -.5px;
+  color: #1A1A2E; letter-spacing: -.5px;
 }
 .ff-header-logo-text span { color: #E91E8C; }
+
+/* Nav links */
 .ff-header-nav { display: flex; align-items: center; gap: 36px; margin-left: auto; }
 .ff-header-nav a {
   font-family: 'Instrument Sans', sans-serif;
   font-size: 16px; font-weight: 600;
-  color: #18160F; text-decoration: none;
+  color: #1A1A2E; text-decoration: none;
   transition: color 0.2s;
 }
 .ff-header-nav a:hover,
 .ff-header-nav a.active { color: #E91E8C; }
+/* Homepage transparent: white nav links */
+body.home #ff-header:not(.scrolled) .ff-header-nav a { color: #ffffff; }
+body.home #ff-header:not(.scrolled) .ff-header-nav a:hover,
+body.home #ff-header:not(.scrolled) .ff-header-nav a.active { color: #E91E8C; }
+
+/* CTA button */
 .ff-header-cta {
   background: #E91E8C;
   color: #fff !important;
@@ -65,6 +88,7 @@ body.admin-bar #ff-header { top: 32px; }
   transition: background 0.2s, transform 0.2s;
 }
 .ff-header-cta:hover { background: #c01575; transform: translateY(-1px); }
+
 @media (max-width: 768px) {
   .ff-header-nav, .ff-header-cta { display: none; }
 }
@@ -78,10 +102,17 @@ body.admin-bar #ff-header { top: 32px; }
 
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="ff-header-logo" aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
       <?php
-      $logo_id = get_theme_mod( 'custom_logo' );
-      if ( $logo_id ) :
-        echo '<img src="' . esc_url( wp_get_attachment_image_url( $logo_id, 'full' ) ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '">';
-      else : ?>
+      $theme_uri  = get_stylesheet_directory_uri();
+      $logo_id    = get_theme_mod( 'custom_logo' );
+      $dark_logo  = $logo_id
+        ? wp_get_attachment_image_url( $logo_id, 'full' )
+        : $theme_uri . '/Faith%20Formers/Faith%20Formers%20Logo_2.svg';
+      $light_logo = $theme_uri . '/Faith%20Formers/Faith%20Formers%20Logo_2_White.svg';
+      $alt        = esc_attr( get_bloginfo( 'name' ) );
+      if ( $dark_logo ) : ?>
+        <img src="<?php echo esc_url( $dark_logo ); ?>" alt="<?php echo $alt; ?>" class="ff-logo-dark" height="48">
+        <img src="<?php echo esc_url( $light_logo ); ?>" alt="<?php echo $alt; ?>" class="ff-logo-light" height="48">
+      <?php else : ?>
         <span class="ff-header-logo-text">Faith <span>Formers</span></span>
       <?php endif; ?>
     </a>
@@ -97,3 +128,15 @@ body.admin-bar #ff-header { top: 32px; }
 
   </div>
 </header>
+
+<script>
+( function () {
+  var header = document.getElementById( 'ff-header' );
+  if ( ! header || ! document.body.classList.contains( 'home' ) ) return;
+  function onScroll() {
+    header.classList.toggle( 'scrolled', window.scrollY > 80 );
+  }
+  window.addEventListener( 'scroll', onScroll, { passive: true } );
+  onScroll();
+} )();
+</script>
