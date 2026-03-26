@@ -5,7 +5,34 @@ Template: influencer
 Author: Faith Formers
 Author URI: https://faithformers.com/
 Description: Child theme for Faith Formers. Catholic content and community — Parish, Home, Heart. Custom hero and brand styling.
-Version: 1.0.0
+Version: 1.1.0
 */
 
-/* Enqueued hero styles live in assets/hero.css */
+/*
+ * Design system
+ * Font:    Instrument Sans (Google Fonts — enqueued via functions.php)
+ * Cream:   #F5EDE0  background
+ * Teal:    #7DD3C0  primary accent
+ * Blue:    #00BFFF  secondary accent
+ * Magenta: #E91E8C  highlight / CTA
+ * Ink:     #18160F  primary text
+ *
+ * Enqueued hero styles live in assets/hero.css
+ */
+
+:root {
+	--ff-font:     'Instrument Sans', sans-serif;
+	--ff-cream:    #F5EDE0;
+	--ff-teal:     #7DD3C0;
+	--ff-blue:     #00BFFF;
+	--ff-magenta:  #E91E8C;
+	--ff-ink:      #18160F;
+	--ff-ink-mid:  #4A4740;
+	--ff-gradient: linear-gradient(135deg, var(--ff-teal) 0%, var(--ff-blue) 50%, var(--ff-magenta) 100%);
+}
+
+body {
+	font-family: var(--ff-font);
+	background-color: var(--ff-cream);
+	color: var(--ff-ink);
+}

@@ -1,34 +1,35 @@
 /**
  * Faith Formers hero section
- * Brand: #4FC3F7 → #8B5CF6 → #C850C0 gradient, Georgia / Arial, warm & pastoral
+ * Design system v2: Instrument Sans · cream #F5EDE0 · teal #7DD3C0 · blue #00BFFF · magenta #E91E8C
  */
 
-.ff-hero {
-	--ff-cyan: #4FC3F7;
-	--ff-purple: #8B5CF6;
-	--ff-magenta: #C850C0;
-	--ff-deep: #2D1B69;
-	--ff-dark: #1A1A2E;
-	--ff-white: #FFFFFF;
-	--ff-gray: #555555;
-	--ff-gradient: linear-gradient(135deg, var(--ff-cyan) 0%, var(--ff-purple) 50%, var(--ff-magenta) 100%);
+/* ─── Hero ──────────────────────────────────────────────────────────── */
 
-	background: var(--ff-dark);
-	color: var(--ff-white);
-	font-family: Arial, sans-serif;
+.ff-hero {
+	--ff-teal:     #7DD3C0;
+	--ff-blue:     #00BFFF;
+	--ff-magenta:  #E91E8C;
+	--ff-cream:    #F5EDE0;
+	--ff-ink:      #18160F;
+	--ff-ink-mid:  #4A4740;
+	--ff-font:     'Instrument Sans', sans-serif;
+	--ff-gradient: linear-gradient(135deg, var(--ff-teal) 0%, var(--ff-blue) 50%, var(--ff-magenta) 100%);
+
+	background: var(--ff-cream);
+	color: var(--ff-ink);
+	font-family: var(--ff-font);
 	padding: clamp(3rem, 8vw, 5rem) 1.5rem;
 	text-align: center;
 	position: relative;
 	overflow: hidden;
 }
 
-/* Subtle gradient glow behind content (on dark = hero) */
+/* Soft teal wash at the top edge */
 .ff-hero::before {
 	content: "";
 	position: absolute;
 	inset: 0;
-	background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(79, 195, 247, 0.12) 0%, transparent 50%),
-	            radial-gradient(ellipse 60% 40% at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+	background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(125, 211, 192, 0.18) 0%, transparent 60%);
 	pointer-events: none;
 }
 
@@ -58,10 +59,10 @@
 }
 
 .ff-hero__title {
-	font-family: Georgia, serif;
+	font-family: var(--ff-font);
 	font-size: clamp(1.5rem, 4vw, 2rem);
-	font-weight: 400;
-	letter-spacing: 0.12em;
+	font-weight: 700;
+	letter-spacing: 0.08em;
 	text-transform: uppercase;
 	margin: 0 0 0.75rem;
 	background: var(--ff-gradient);
@@ -73,19 +74,17 @@
 .ff-hero__tagline {
 	font-size: clamp(1.1rem, 2.5vw, 1.35rem);
 	line-height: 1.45;
-	color: var(--ff-white);
+	color: var(--ff-ink);
 	margin: 0 0 1rem;
-	font-weight: 400;
+	font-weight: 500;
 }
 
 .ff-hero__intro {
 	font-size: 1rem;
-	line-height: 1.55;
-	color: rgba(255, 255, 255, 0.88);
-	margin: 0 0 1.75rem;
+	line-height: 1.6;
+	color: var(--ff-ink-mid);
+	margin: 0 auto 1.75rem;
 	max-width: 36rem;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .ff-hero__cta {
@@ -95,37 +94,37 @@
 .ff-hero__btn {
 	display: inline-block;
 	padding: 0.85rem 1.75rem;
-	font-family: Arial, sans-serif;
+	font-family: var(--ff-font);
 	font-size: 1rem;
 	font-weight: 600;
 	text-decoration: none;
-	color: var(--ff-white);
+	color: #ffffff;
 	background: var(--ff-gradient);
 	border-radius: 4px;
 	transition: opacity 0.2s ease, transform 0.2s ease;
-	box-shadow: 0 4px 20px rgba(139, 92, 246, 0.35);
+	box-shadow: 0 4px 20px rgba(233, 30, 140, 0.25);
 }
 
 .ff-hero__btn:hover,
 .ff-hero__btn:focus {
-	opacity: 0.95;
+	opacity: 0.9;
 	transform: translateY(-1px);
-	color: var(--ff-white);
+	color: #ffffff;
 }
 
 .ff-hero__pillars {
 	font-size: 0.9rem;
-	color: var(--ff-gray);
+	color: var(--ff-ink-mid);
 	margin: 0;
 }
 
 .ff-hero__pillar-sep {
 	margin: 0 0.35rem;
-	opacity: 0.6;
+	opacity: 0.5;
 }
 
 .ff-hero__pillar {
-	color: rgba(255, 255, 255, 0.7);
+	color: var(--ff-ink-mid);
 }
 
 /* Hero image (Anna) — right side on desktop */
@@ -134,7 +133,8 @@
 	aspect-ratio: 3 / 2;
 	border-radius: 8px;
 	overflow: hidden;
-	background: rgba(255, 255, 255, 0.06);
+	background: rgba(125, 211, 192, 0.12);
+	border: 1px solid rgba(125, 211, 192, 0.3);
 }
 
 .ff-hero__image {
@@ -153,24 +153,23 @@
 	align-items: center;
 	justify-content: center;
 	gap: 0.5rem;
-	border: 2px dashed rgba(255, 255, 255, 0.2);
-	border-radius: 8px;
 }
 
 .ff-hero__placeholder-text {
-	font-family: Georgia, serif;
+	font-family: var(--ff-font);
 	font-size: 1.1rem;
-	color: rgba(255, 255, 255, 0.5);
+	color: var(--ff-ink-mid);
 }
 
 .ff-hero__placeholder-hint {
 	font-size: 0.8rem;
-	color: rgba(255, 255, 255, 0.35);
+	color: rgba(74, 71, 64, 0.5);
 }
 
 @media (min-width: 768px) {
 	.ff-hero {
 		padding: clamp(4rem, 10vw, 6rem) 2rem;
+		text-align: left;
 	}
 	.ff-hero__wrap {
 		grid-template-columns: 1fr 1fr;
@@ -179,26 +178,32 @@
 	.ff-hero__logo img {
 		max-width: 280px;
 	}
+	.ff-hero__intro {
+		margin-left: 0;
+		margin-right: 0;
+	}
 	.ff-hero__image-wrap {
 		aspect-ratio: 4 / 3;
 		min-height: 280px;
 	}
 }
 
-/* Three Pillars — Parish, Home, Heart cards */
-.ff-pillars {
-	--ff-deep: #2D1B69;
-	--ff-gray: #555555;
-	--ff-light: #F5F5F7;
-	--ff-cyan: #4FC3F7;
-	--ff-purple: #8B5CF6;
-	--ff-magenta: #C850C0;
-	--ff-gradient: linear-gradient(135deg, var(--ff-cyan) 0%, var(--ff-purple) 50%, var(--ff-magenta) 100%);
+/* ─── Three Pillars ─────────────────────────────────────────────────── */
 
-	background: #FFFFFF;
+.ff-pillars {
+	--ff-teal:     #7DD3C0;
+	--ff-blue:     #00BFFF;
+	--ff-magenta:  #E91E8C;
+	--ff-cream:    #F5EDE0;
+	--ff-ink:      #18160F;
+	--ff-ink-mid:  #4A4740;
+	--ff-font:     'Instrument Sans', sans-serif;
+	--ff-gradient: linear-gradient(135deg, var(--ff-teal) 0%, var(--ff-blue) 50%, var(--ff-magenta) 100%);
+
+	background: #ffffff;
 	padding: clamp(3rem, 8vw, 5rem) 1.5rem;
-	font-family: Arial, sans-serif;
-	border-top: 1px solid rgba(45, 27, 105, 0.08);
+	font-family: var(--ff-font);
+	border-top: 1px solid rgba(125, 211, 192, 0.2);
 }
 
 .ff-pillars__inner {
@@ -207,10 +212,10 @@
 }
 
 .ff-pillars__title {
-	font-family: Georgia, serif;
+	font-family: var(--ff-font);
 	font-size: clamp(1.5rem, 3.5vw, 2rem);
-	font-weight: 400;
-	color: var(--ff-deep);
+	font-weight: 600;
+	color: var(--ff-ink);
 	text-align: center;
 	margin: 0 0 0.5rem;
 }
@@ -218,7 +223,7 @@
 .ff-pillars__subtitle {
 	font-size: 1.05rem;
 	line-height: 1.5;
-	color: var(--ff-gray);
+	color: var(--ff-ink-mid);
 	text-align: center;
 	max-width: 36rem;
 	margin: 0 auto 2.25rem;
@@ -231,7 +236,7 @@
 }
 
 .ff-pillars__card {
-	background: var(--ff-light);
+	background: var(--ff-cream);
 	padding: 1.75rem 1.5rem;
 	border-radius: 8px;
 	position: relative;
@@ -250,14 +255,14 @@
 }
 
 .ff-pillars__card:hover {
-	box-shadow: 0 8px 24px rgba(45, 27, 105, 0.08);
+	box-shadow: 0 8px 24px rgba(125, 211, 192, 0.2);
 }
 
 .ff-pillars__card-title {
-	font-family: Georgia, serif;
-	font-size: 1.25rem;
-	font-weight: 400;
-	color: var(--ff-deep);
+	font-family: var(--ff-font);
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: var(--ff-ink);
 	margin: 0 0 0.75rem;
 	line-height: 1.3;
 }
@@ -265,16 +270,15 @@
 .ff-pillars__card-desc {
 	font-size: 0.95rem;
 	line-height: 1.6;
-	color: var(--ff-gray);
+	color: var(--ff-ink-mid);
 	margin: 0 0 1.25rem;
 }
 
 .ff-pillars__link {
 	font-size: 0.95rem;
 	font-weight: 600;
-	color: var(--ff-purple);
 	text-decoration: none;
-	background: linear-gradient(135deg, var(--ff-cyan), var(--ff-purple));
+	background: var(--ff-gradient);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -283,7 +287,7 @@
 
 .ff-pillars__link:hover,
 .ff-pillars__link:focus {
-	opacity: 0.85;
+	opacity: 0.8;
 }
 
 @media (min-width: 768px) {
@@ -299,19 +303,20 @@
 	}
 }
 
-/* About Faith Formers — mission section */
-.ff-about {
-	--ff-deep: #2D1B69;
-	--ff-gray: #555555;
-	--ff-light: #F5F5F7;
-	--ff-cyan: #4FC3F7;
-	--ff-purple: #8B5CF6;
-	--ff-magenta: #C850C0;
-	--ff-gradient: linear-gradient(135deg, var(--ff-cyan) 0%, var(--ff-purple) 50%, var(--ff-magenta) 100%);
+/* ─── About Faith Formers ────────────────────────────────────────────── */
 
-	background: var(--ff-light);
+.ff-about {
+	--ff-teal:     #7DD3C0;
+	--ff-blue:     #00BFFF;
+	--ff-magenta:  #E91E8C;
+	--ff-cream:    #F5EDE0;
+	--ff-ink:      #18160F;
+	--ff-ink-mid:  #4A4740;
+	--ff-font:     'Instrument Sans', sans-serif;
+
+	background: var(--ff-cream);
 	padding: clamp(3rem, 8vw, 5rem) 1.5rem;
-	font-family: Arial, sans-serif;
+	font-family: var(--ff-font);
 }
 
 .ff-about__inner {
@@ -320,10 +325,10 @@
 }
 
 .ff-about__title {
-	font-family: Georgia, serif;
+	font-family: var(--ff-font);
 	font-size: clamp(1.5rem, 4vw, 2rem);
-	font-weight: 400;
-	color: var(--ff-deep);
+	font-weight: 600;
+	color: var(--ff-ink);
 	text-align: center;
 	margin: 0 0 1.25rem;
 }
@@ -331,15 +336,15 @@
 .ff-about__lead {
 	font-size: clamp(1.05rem, 2.2vw, 1.2rem);
 	line-height: 1.6;
-	color: var(--ff-deep);
+	color: var(--ff-ink);
 	margin: 0 0 1rem;
-	font-weight: 400;
+	font-weight: 500;
 }
 
 .ff-about__text {
 	font-size: 1rem;
 	line-height: 1.65;
-	color: var(--ff-gray);
+	color: var(--ff-ink-mid);
 	margin: 0 0 2rem;
 }
 
@@ -352,31 +357,31 @@
 
 .ff-about__pillar {
 	padding: 1.25rem 1rem;
-	background: #FFFFFF;
+	background: #ffffff;
 	border-radius: 8px;
-	box-shadow: 0 2px 12px rgba(45, 27, 105, 0.06);
-	border-left: 4px solid var(--ff-purple);
+	box-shadow: 0 2px 12px rgba(125, 211, 192, 0.12);
+	border-left: 4px solid var(--ff-teal);
 }
 
 .ff-about__pillar-title {
-	font-family: Georgia, serif;
-	font-size: 1.15rem;
-	font-weight: 400;
-	color: var(--ff-deep);
+	font-family: var(--ff-font);
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: var(--ff-ink);
 	margin: 0 0 0.5rem;
 }
 
 .ff-about__pillar-text {
 	font-size: 0.95rem;
 	line-height: 1.55;
-	color: var(--ff-gray);
+	color: var(--ff-ink-mid);
 	margin: 0;
 }
 
 .ff-about__close {
 	font-size: 1.05rem;
 	line-height: 1.5;
-	color: var(--ff-deep);
+	color: var(--ff-ink);
 	text-align: center;
 	margin: 0;
 	font-style: italic;
@@ -395,16 +400,20 @@
 	}
 }
 
-/* Newsletter section (Kit embed) — follows hero */
-.ff-newsletter {
-	--ff-deep: #2D1B69;
-	--ff-gray: #555555;
-	--ff-light: #F5F5F7;
+/* ─── Newsletter ─────────────────────────────────────────────────────── */
 
-	background: var(--ff-light);
+.ff-newsletter {
+	--ff-magenta:  #E91E8C;
+	--ff-cream:    #F5EDE0;
+	--ff-ink:      #18160F;
+	--ff-ink-mid:  #4A4740;
+	--ff-font:     'Instrument Sans', sans-serif;
+
+	background: #ffffff;
 	padding: clamp(2.5rem, 6vw, 4rem) 1.5rem;
 	text-align: center;
-	font-family: Arial, sans-serif;
+	font-family: var(--ff-font);
+	border-top: 1px solid rgba(125, 211, 192, 0.2);
 }
 
 .ff-newsletter__inner {
@@ -413,17 +422,17 @@
 }
 
 .ff-newsletter__title {
-	font-family: Georgia, serif;
+	font-family: var(--ff-font);
 	font-size: clamp(1.35rem, 3vw, 1.6rem);
-	font-weight: 400;
-	color: var(--ff-deep);
+	font-weight: 600;
+	color: var(--ff-ink);
 	margin: 0 0 0.5rem;
 }
 
 .ff-newsletter__text {
 	font-size: 1rem;
 	line-height: 1.5;
-	color: var(--ff-gray);
+	color: var(--ff-ink-mid);
 	margin: 0 0 1.5rem;
 }
 
@@ -433,7 +442,7 @@
 
 .ff-newsletter__form input[type="email"],
 .ff-newsletter__form button {
-	font-family: Arial, sans-serif;
+	font-family: var(--ff-font);
 }
 
 @media (min-width: 768px) {
@@ -442,13 +451,15 @@
 	}
 }
 
-/* Front page template wrapper */
+/* ─── Front page wrapper ─────────────────────────────────────────────── */
+
 .ff-front-page {
 	padding: 0;
 }
+
 .ff-front-page__content {
 	max-width: 48rem;
 	margin: 0 auto;
 	padding: 2rem 1.5rem 3rem;
-	font-family: Arial, sans-serif;
+	font-family: 'Instrument Sans', sans-serif;
 }

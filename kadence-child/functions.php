@@ -9,6 +9,14 @@ function faithformers_enqueue_styles() {
 	$parent_uri = get_template_directory_uri();
 	$child_uri  = get_stylesheet_directory_uri();
 
+	// Google Fonts: Instrument Sans
+	wp_enqueue_style(
+		'faithformers-fonts',
+		'https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap',
+		array(),
+		null
+	);
+
 	wp_enqueue_style(
 		'influencer-parent',
 		$parent_uri . '/style.css',
@@ -18,7 +26,7 @@ function faithformers_enqueue_styles() {
 	wp_enqueue_style(
 		'faithformers-child',
 		$child_uri . '/style.css',
-		array( 'influencer-parent' ),
+		array( 'influencer-parent', 'faithformers-fonts' ),
 		wp_get_theme()->get( 'Version' )
 	);
 
