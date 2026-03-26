@@ -45,12 +45,9 @@ body.home #ff-header.scrolled {
 
 /* Logo */
 .ff-header-logo { flex-shrink: 0; display: flex; align-items: center; text-decoration: none; }
-.ff-header-logo img { height: 48px; width: auto; display: block; }
-.ff-logo-light { display: none; }
-.ff-logo-dark  { display: block; }
-/* Homepage transparent: swap to white logo */
-body.home #ff-header:not(.scrolled) .ff-logo-light { display: block; }
-body.home #ff-header:not(.scrolled) .ff-logo-dark  { display: none; }
+.ff-header-logo img { height: 48px; width: auto; display: block; filter: none; transition: filter 0.3s ease; }
+/* Homepage transparent: invert logo to white */
+body.home #ff-header:not(.scrolled) .ff-header-logo img { filter: brightness(0) invert(1); }
 
 .ff-header-logo-text {
   font-family: 'Instrument Sans', sans-serif;
@@ -104,14 +101,12 @@ body.home #ff-header:not(.scrolled) .ff-header-nav a.active { color: #E91E8C; }
       <?php
       $theme_uri  = get_stylesheet_directory_uri();
       $logo_id    = get_theme_mod( 'custom_logo' );
-      $dark_logo  = $logo_id
+      $logo_url   = $logo_id
         ? wp_get_attachment_image_url( $logo_id, 'full' )
         : $theme_uri . '/Faith%20Formers/Faith%20Formers%20Logo_2.svg';
-      $light_logo = $theme_uri . '/Faith%20Formers/Faith%20Formers%20Logo_2_White.svg';
       $alt        = esc_attr( get_bloginfo( 'name' ) );
-      if ( $dark_logo ) : ?>
-        <img src="<?php echo esc_url( $dark_logo ); ?>" alt="<?php echo $alt; ?>" class="ff-logo-dark" height="48">
-        <img src="<?php echo esc_url( $light_logo ); ?>" alt="<?php echo $alt; ?>" class="ff-logo-light" height="48">
+      if ( $logo_url ) : ?>
+        <img src="<?php echo esc_url( $logo_url ); ?>" alt="<?php echo $alt; ?>" height="48">
       <?php else : ?>
         <span class="ff-header-logo-text">Faith <span>Formers</span></span>
       <?php endif; ?>

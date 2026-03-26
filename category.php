@@ -35,9 +35,9 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 .ff-archive-header__inner { max-width: 1200px; margin: 0 auto; }
 .ff-archive-header__title {
 	font-family: 'Instrument Sans', sans-serif;
-	font-size: 64px;
-	font-weight: 900;
-	color: #18160F;
+	font-size: clamp(2.5rem, 5vw, 4rem);
+	font-weight: 800;
+	color: #1A1A2E;
 	margin: 0 0 0.5rem;
 	letter-spacing: 0.5px;
 }
@@ -57,7 +57,7 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 .ff-archive-pill {
 	display: inline-block;
 	padding: 10px 22px;
-	border-radius: 40px;
+	border-radius: 100px;
 	font-family: 'Instrument Sans', sans-serif;
 	font-weight: 600;
 	font-size: 14px;
@@ -65,14 +65,14 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 	transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 .ff-archive-pill--active {
-	background: #18160F;
+	background: #1A1A2E;
 	color: #ffffff;
-	border: 2px solid #18160F;
+	border: 2px solid #1A1A2E;
 }
 .ff-archive-pill--inactive {
-	background: #ffffff;
-	color: #18160F;
-	border: 2px solid #18160F;
+	background: transparent;
+	color: #1A1A2E;
+	border: 2px solid #1A1A2E;
 }
 .ff-archive-pill--inactive:hover { background: #F5EDE0; }
 
@@ -268,7 +268,7 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 .ff-archive-newsletter .seva-form, .ff-archive-newsletter .formkit-form { margin: 0 auto !important; text-align: center !important; max-width: 600px; }
 
 @media (max-width: 900px) {
-	.ff-archive-header__title { font-size: 42px; }
+	.ff-archive-header__title { font-size: 2.5rem; }
 	.ff-archive-wrap { flex-direction: column !important; padding: 0 24px !important; }
 	.ff-archive-main, .ff-archive-sidebar { width: 100% !important; }
 	.ff-archive-grid { grid-template-columns: 1fr; }

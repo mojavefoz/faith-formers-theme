@@ -104,7 +104,7 @@
 <footer class="ff-footer">
 	<div class="ff-footer__top">
 		<div class="ff-footer__col">
-			<img src="https://staging.faithformers.com/wp-content/uploads/2026/03/Faith-Formers-Horizontal.png" alt="Faith Formers" class="ff-footer__logo" style="max-width:180px;">
+			<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/Faith%20Formers/Faith%20Formers%20Logo_2.svg' ); ?>" alt="Faith Formers" class="ff-footer__logo" style="max-width:180px;filter:brightness(0) invert(1);">
 			<p class="ff-footer__tagline">Formation for the parish. Faith for the home. Quiet for the heart.</p>
 		</div>
 		<div class="ff-footer__col">

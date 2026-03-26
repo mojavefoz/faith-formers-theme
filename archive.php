@@ -11,7 +11,7 @@ $current_slug = is_category() ? get_queried_object()->slug : '';
 ?>
 
 <style type="text/css">
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 .ff-archive-page { font-family: Arial, sans-serif; color: #555555; margin: 0; padding: 0; width: 100%; }
 .ff-archive-page h1, .ff-archive-page h2 { font-family: 'Montserrat', sans-serif; }
@@ -32,10 +32,10 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 }
 .ff-archive-header__inner { max-width: 1200px; margin: 0 auto; }
 .ff-archive-header__title {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 64px;
-	font-weight: 900;
-	color: #2D1B69;
+	font-family: 'Instrument Sans', sans-serif;
+	font-size: clamp(2.5rem, 5vw, 4rem);
+	font-weight: 800;
+	color: #1A1A2E;
 	margin: 0 0 0.5rem;
 	letter-spacing: 0.5px;
 }
@@ -55,24 +55,24 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 .ff-archive-pill {
 	display: inline-block;
 	padding: 10px 22px;
-	border-radius: 40px;
-	font-family: 'Montserrat', sans-serif;
+	border-radius: 100px;
+	font-family: 'Instrument Sans', sans-serif;
 	font-weight: 600;
 	font-size: 14px;
 	text-decoration: none;
 	transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 .ff-archive-pill--active {
-	background: #2D1B69;
+	background: #1A1A2E;
 	color: #ffffff;
-	border: 2px solid #2D1B69;
+	border: 2px solid #1A1A2E;
 }
 .ff-archive-pill--inactive {
-	background: #ffffff;
-	color: #2D1B69;
-	border: 2px solid #2D1B69;
+	background: transparent;
+	color: #1A1A2E;
+	border: 2px solid #1A1A2E;
 }
-.ff-archive-pill--inactive:hover { background: #F5F5F7; }
+.ff-archive-pill--inactive:hover { background: #F5EDE0; }
 
 /* Post grid */
 .ff-archive-grid-wrap {
@@ -210,7 +210,7 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 .ff-archive-newsletter__embed { min-height: 80px; }
 
 @media (max-width: 900px) {
-	.ff-archive-header__title { font-size: 42px; }
+	.ff-archive-header__title { font-size: 2.5rem; }
 	.ff-archive-grid { grid-template-columns: 1fr; }
 }
 </style>
