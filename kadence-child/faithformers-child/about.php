@@ -6,6 +6,26 @@
  * @package Faith_Formers_Child
  */
 
+// Person schema for Anna Forsberg — output via wp_head (fires inside get_header()).
+add_action( 'wp_head', function () {
+	$schema = [
+		'@context'    => 'https://schema.org',
+		'@type'       => 'Person',
+		'@id'         => home_url( '/about-anna/#person' ),
+		'name'        => 'Anna Forsberg',
+		'jobTitle'    => 'Director of Family Faith Formation',
+		'description' => 'Anna Forsberg is a Catholic faith formation professional, speaker, and retreat facilitator with over a decade of parish ministry experience. Director of Family Faith Formation at Holy Spirit Catholic Church in Las Vegas.',
+		'url'         => home_url( '/about-anna/' ),
+		'worksFor'    => [
+			'@type' => 'Organization',
+			'@id'   => home_url( '/#organization' ),
+			'name'  => 'Faith Formers',
+			'url'   => home_url( '/' ),
+		],
+	];
+	echo '<script type="application/ld+json">' . wp_json_encode( $schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) . '</script>' . "\n";
+}, 10 );
+
 get_header();
 ?>
 

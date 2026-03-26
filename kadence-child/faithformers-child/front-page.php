@@ -6,6 +6,51 @@
  * @package Faith_Formers_Child
  */
 
+// FAQPage schema — hardcoded FAQ about Catholic faith formation, output via wp_head.
+add_action( 'wp_head', function () {
+	$faqs = [
+		[
+			'q' => 'What is Catholic faith formation?',
+			'a' => 'Catholic faith formation is the ongoing process of growing in knowledge, relationship, and practice of the Catholic faith — through Scripture, sacraments, prayer, community, and service. It happens at every stage of life, from childhood through adulthood.',
+		],
+		[
+			'q' => 'How can I pass on the Catholic faith to my children at home?',
+			'a' => 'Start with small, consistent practices: pray grace before meals, mark feast days on the calendar, read Scripture together, talk about Sunday\'s Mass during the week. The Catholic faith belongs in ordinary moments — not just in church.',
+		],
+		[
+			'q' => 'What resources does Faith Formers offer for parish faith formation?',
+			'a' => 'Faith Formers provides articles, session guides, liturgical-year resources, and professional encouragement for DREs, catechists, and youth ministers. Anna Forsberg also offers commissioned retreats and formation days for parish staff and communities.',
+		],
+		[
+			'q' => 'How do I start a personal prayer practice rooted in Catholic tradition?',
+			'a' => 'Ignatian prayer (like the Daily Examen) and Lectio Divina are two accessible starting points. Begin with just five minutes a day — review what moved you, consoled you, or troubled you. Regularity matters more than length.',
+		],
+		[
+			'q' => 'What is the difference between catechesis and faith formation?',
+			'a' => 'Catechesis focuses on systematic instruction in Catholic doctrine and tradition. Faith formation is broader — it encompasses catechesis but also includes the practices, relationships, and experiences that form a person\'s whole way of living their faith.',
+		],
+	];
+
+	$entities = array_map( function ( $faq ) {
+		return [
+			'@type'          => 'Question',
+			'name'           => $faq['q'],
+			'acceptedAnswer' => [
+				'@type' => 'Answer',
+				'text'  => $faq['a'],
+			],
+		];
+	}, $faqs );
+
+	$schema = [
+		'@context'   => 'https://schema.org',
+		'@type'      => 'FAQPage',
+		'mainEntity' => $entities,
+	];
+
+	echo '<script type="application/ld+json">' . wp_json_encode( $schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) . '</script>' . "\n";
+}, 10 );
+
 get_header();
 ?>
 
