@@ -110,30 +110,32 @@ get_header(); ?>
        ABOUT ANNA
   ═══════════════════════════════════════ -->
   <section class="ff-anna">
-    <div class="ff-anna__text">
-      <p class="ff-eyebrow ff-eyebrow--mg">Meet your guide</p>
-      <h2>Hi, I'm <em>Anna.</em></h2>
-      <div class="ff-anna__rule"></div>
-      <p>I'm a wife, mum, and Catholic formation nerd with a dual degree in theology and education from Leeds. I started my career teaching in Catholic schools — and somewhere along the way, teaching faith became my whole life's work.</p>
-      <p>For years I've walked alongside families, parishes, and individuals helping them move from going-through-the-motions to genuinely on-fire faith. Not performance. Not perfection. Just real encounter with a living God.</p>
-      <p>Faith Formers is where I bring all of it together — retreats, resources, and a community that takes this seriously.</p>
-      <a href="<?php echo esc_url( get_permalink( get_page_by_path('about') ) ); ?>" class="ff-anna__cta">Read Anna's full story →</a>
-      <blockquote class="ff-anna__quote">
-        <p>"Formation isn't a program. It's a relationship with a person — Jesus."</p>
-        <cite>— Anna Forsberg</cite>
-      </blockquote>
-    </div>
-    <div class="ff-anna__photo">
-      <?php
-      $anna_img = get_theme_mod('ff_anna_portrait');
-      if ( $anna_img ) : ?>
-        <img src="<?php echo esc_url($anna_img); ?>" alt="Anna Forsberg">
-      <?php else : ?>
-        <div class="ff-anna__photo-ph">
-          <span>Anna portrait<br><small>Add image in Customizer</small></span>
-        </div>
-      <?php endif; ?>
-      <div class="ff-anna__photo-accent"></div>
+    <div class="ff-anna__inner" style="display:grid;grid-template-columns:1fr 1fr;align-items:center;max-width:1200px;margin:0 auto;padding:0 clamp(24px,5vw,64px);">
+      <div class="ff-anna__text">
+        <p class="ff-eyebrow ff-eyebrow--mg">Meet your guide</p>
+        <h2>Hi, I'm <em>Anna.</em></h2>
+        <div class="ff-anna__rule"></div>
+        <p>I'm a wife, mum, and Catholic formation nerd with a dual degree in theology and education from Leeds. I started my career teaching in Catholic schools — and somewhere along the way, teaching faith became my whole life's work.</p>
+        <p>For years I've walked alongside families, parishes, and individuals helping them move from going-through-the-motions to genuinely on-fire faith. Not performance. Not perfection. Just real encounter with a living God.</p>
+        <p>Faith Formers is where I bring all of it together — retreats, resources, and a community that takes this seriously.</p>
+        <a href="<?php echo esc_url( get_permalink( get_page_by_path('about') ) ); ?>" class="ff-anna__cta">Read Anna's full story →</a>
+        <blockquote class="ff-anna__quote">
+          <p>"Formation isn't a program. It's a relationship with a person — Jesus."</p>
+          <cite>— Anna Forsberg</cite>
+        </blockquote>
+      </div>
+      <div class="ff-anna__photo" style="max-height:480px;min-height:0;">
+        <?php
+        $anna_img = get_theme_mod('ff_anna_portrait');
+        if ( $anna_img ) : ?>
+          <img src="<?php echo esc_url($anna_img); ?>" alt="Anna Forsberg">
+        <?php else : ?>
+          <div class="ff-anna__photo-ph">
+            <span>Anna portrait<br><small>Add image in Customizer</small></span>
+          </div>
+        <?php endif; ?>
+        <div class="ff-anna__photo-accent"></div>
+      </div>
     </div>
   </section>
 
@@ -143,8 +145,8 @@ get_header(); ?>
   <section class="ff-guide" id="ff-guide">
     <div class="ff-guide__left">
       <p class="ff-eyebrow" style="color:rgba(255,255,255,.4);">Free resource</p>
-      <h2>Listening<br><em>With the Heart</em></h2>
-      <p class="ff-guide__sub">A retreat guide rooted in Lectio Divina — for anyone who wants a prayer life that actually holds. Yours free when you join.</p>
+      <h2><?php echo esc_html( get_theme_mod( 'ff_featured_resource_title', 'Our One-Hour Retreat' ) ); ?></h2>
+      <p class="ff-guide__sub"><?php echo esc_html( get_theme_mod( 'ff_featured_resource_desc', 'A retreat guide rooted in Lectio Divina — for anyone who wants a prayer life that actually holds. Yours free when you join.' ) ); ?></p>
 
       <?php if ( shortcode_exists('ff_email_signup') ) :
         echo do_shortcode('[ff_email_signup]');

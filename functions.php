@@ -44,3 +44,34 @@ function faithformers_child_enqueue_scripts() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'faithformers_child_enqueue_scripts', 20 );
+
+/**
+ * Customizer: Featured Resource section (front page guide block).
+ */
+function faithformers_customize_featured_resource( $wp_customize ) {
+	$wp_customize->add_section( 'faithformers_featured_resource', array(
+		'title'    => __( 'Featured Resource', 'faithformers' ),
+		'priority' => 31,
+	) );
+
+	$wp_customize->add_setting( 'ff_featured_resource_title', array(
+		'default'           => 'Our One-Hour Retreat',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( 'ff_featured_resource_title', array(
+		'label'   => __( 'Title', 'faithformers' ),
+		'section' => 'faithformers_featured_resource',
+		'type'    => 'text',
+	) );
+
+	$wp_customize->add_setting( 'ff_featured_resource_desc', array(
+		'default'           => 'A retreat guide rooted in Lectio Divina — for anyone who wants a prayer life that actually holds. Yours free when you join.',
+		'sanitize_callback' => 'sanitize_textarea_field',
+	) );
+	$wp_customize->add_control( 'ff_featured_resource_desc', array(
+		'label'   => __( 'Description', 'faithformers' ),
+		'section' => 'faithformers_featured_resource',
+		'type'    => 'textarea',
+	) );
+}
+add_action( 'customize_register', 'faithformers_customize_featured_resource' );
