@@ -109,6 +109,9 @@ get_header();
 	border-radius: 12px;
 	padding: 2rem;
 }
+.ff-contact-card--retreat  { border-left: 4px solid #E91E8C; }
+.ff-contact-card--partner  { border-left: 4px solid #7DD3C0; }
+.ff-contact-card--general  { border-left: 4px solid #2B4C7E; }
 .ff-contact-card__num {
 	font-size: 0.78rem;
 	font-weight: 800;
@@ -169,17 +172,17 @@ get_header();
 
 	<section class="ff-contact-cards">
 		<div class="ff-contact-cards__inner">
-			<div class="ff-contact-card">
+			<div class="ff-contact-card ff-contact-card--retreat">
 				<span class="ff-contact-card__num">01</span>
 				<h3 class="ff-contact-card__title">Retreat Enquiry</h3>
 				<p class="ff-contact-card__text">Commission Anna to lead a retreat for your parish or group.</p>
 			</div>
-			<div class="ff-contact-card">
+			<div class="ff-contact-card ff-contact-card--partner">
 				<span class="ff-contact-card__num">02</span>
 				<h3 class="ff-contact-card__title">Partnership</h3>
 				<p class="ff-contact-card__text">Collaborate with Faith Formers on content, events or projects.</p>
 			</div>
-			<div class="ff-contact-card">
+			<div class="ff-contact-card ff-contact-card--general">
 				<span class="ff-contact-card__num">03</span>
 				<h3 class="ff-contact-card__title">General</h3>
 				<p class="ff-contact-card__text">Questions, feedback, or just saying hello.</p>
