@@ -140,7 +140,7 @@
 			<span class="ff-footer__sep">·</span>
 			<a href="<?php echo esc_url( home_url( '/cookie-policy/' ) ); ?>">Cookie Policy</a>
 			<span class="ff-footer__sep">·</span>
-			<a href="<?php echo esc_url( home_url( '/amazon-associates-disclosure/' ) ); ?>">Amazon Associates Disclosure</a>
+			<a href="<?php echo esc_url( home_url( '/terms-and-conditions/' ) ); ?>">Amazon Associates Disclosure</a>
 		</div>
 	</div>
 </footer>
