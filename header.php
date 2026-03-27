@@ -127,7 +127,7 @@ body.home #ff-header:not(.scrolled) .ff-header-nav a.active { color: #E91E8C; }
 <script>
 ( function () {
   var header = document.getElementById( 'ff-header' );
-  if ( ! header || ! document.body.classList.contains( 'home' ) ) return;
+  if ( ! header ) return;
   function onScroll() {
     header.classList.toggle( 'scrolled', window.scrollY > 80 );
   }

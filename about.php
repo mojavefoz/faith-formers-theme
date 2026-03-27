@@ -29,7 +29,7 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	text-align: center;
 	padding: 80px 24px 80px;
 	box-sizing: border-box;
-	background: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C);
+	background: #FAF7F2;
 }
 .ff-about-hero__content {
 	position: relative;
@@ -42,25 +42,24 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 4px;
-	color: rgba(255, 255, 255, 0.7);
+	color: #2B4C7E;
 	margin: 0 0 1rem;
 }
 .ff-about-hero__headline {
 	font-family: 'Instrument Sans', sans-serif;
-	font-size: clamp(50px, 6vw, 96px);
-	font-weight: 700;
+	font-size: clamp(2.8rem, 5vw, 5rem);
+	font-weight: 800;
 	line-height: 1.15;
-	color: #FFFFFF;
+	color: #1A1A2E;
 	margin: 0 0 1.5rem;
 }
 .ff-about-hero__subtext {
 	font-family: 'Instrument Sans', sans-serif;
 	font-size: 22px;
 	line-height: 1.9;
-	color: #FFFFFF;
+	color: #2B4C7E;
 	margin: 0 auto;
 	max-width: 650px;
-	opacity: 0.95;
 }
 
 /* Mission — accent line, larger quote, larger body */
