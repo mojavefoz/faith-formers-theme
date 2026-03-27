@@ -74,11 +74,11 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 	color: #1A1A2E;
 	border: 2px solid #1A1A2E;
 }
-.ff-archive-pill--inactive:hover { background: #F5EDE0; }
+.ff-archive-pill--inactive:hover { background: #FAF7F2; }
 
 /* Main + sidebar layout — wrapper uses inline flex; 70% main, 28% sidebar */
 .ff-archive-grid-wrap {
-	background: #F5EDE0;
+	background: #FAF7F2;
 	padding: 80px 0;
 }
 .ff-archive-main { min-width: 0; flex-shrink: 0; }

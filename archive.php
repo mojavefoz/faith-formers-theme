@@ -72,11 +72,11 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 	color: #1A1A2E;
 	border: 2px solid #1A1A2E;
 }
-.ff-archive-pill--inactive:hover { background: #F5EDE0; }
+.ff-archive-pill--inactive:hover { background: #FAF7F2; }
 
 /* Post grid */
 .ff-archive-grid-wrap {
-	background: #F5F5F7;
+	background: #FAF7F2;
 	padding: 80px 24px;
 }
 .ff-archive-grid {
