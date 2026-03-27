@@ -14,7 +14,7 @@
   right: 0;
   z-index: 1000;
   height: 72px;
-  background: #FAF7F2;
+  background: #F5EDE0;
   box-shadow: 0 1px 0 rgba(0,0,0,.08);
 }
 body.admin-bar #ff-header { top: 32px; }
@@ -23,12 +23,12 @@ body.admin-bar #ff-header { top: 32px; }
 }
 
 body.home #ff-header {
-  background: #FAF7F2;
+  background: #F5EDE0;
   box-shadow: 0 1px 0 rgba(0,0,0,0.08);
 }
 
 body:not(.home) #ff-header {
-  background: #FAF7F2;
+  background: #F5EDE0;
   box-shadow: 0 1px 0 rgba(0,0,0,0.08);
 }
 
