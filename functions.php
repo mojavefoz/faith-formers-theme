@@ -130,6 +130,12 @@ function faithformers_customize_about_page( $wp_customize ) {
 add_action( 'customize_register', 'faithformers_customize_about_page' );
 
 /**
+ * Disable Kadence sticky header and scroll compensation entirely.
+ */
+add_filter( 'kadence_sticky_header', '__return_false' );
+add_filter( 'kadence_header_scroll', '__return_false' );
+
+/**
  * Load Kit modal script sitewide.
  */
 function faithformers_kit_modal_script() {

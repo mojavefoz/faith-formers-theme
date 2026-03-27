@@ -85,6 +85,7 @@ body:not(.home) #ff-header {
 </style>
 </head>
 <body <?php body_class(); ?>>
+<script>document.addEventListener('DOMContentLoaded',function(){document.body.style.paddingTop='0';});</script>
 <?php wp_body_open(); ?>
 
 <header id="ff-header">
