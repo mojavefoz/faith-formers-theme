@@ -87,6 +87,26 @@ function faithformers_customize_featured_resource( $wp_customize ) {
 add_action( 'customize_register', 'faithformers_customize_featured_resource' );
 
 /**
+ * Customizer: About Page section.
+ */
+function faithformers_customize_about_page( $wp_customize ) {
+	$wp_customize->add_section( 'faithformers_about_page', array(
+		'title'    => __( 'About Page', 'faithformers' ),
+		'priority' => 32,
+	) );
+
+	$wp_customize->add_setting( 'ff_about_community_photo', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ff_about_community_photo', array(
+		'label'   => __( 'Community Photo (parallax strip)', 'faithformers' ),
+		'section' => 'faithformers_about_page',
+	) ) );
+}
+add_action( 'customize_register', 'faithformers_customize_about_page' );
+
+/**
  * Load Kit modal script sitewide.
  */
 function faithformers_kit_modal_script() {

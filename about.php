@@ -18,18 +18,39 @@ html, body { margin: 0; padding: 0; background-color: #F5EDE0; }
 .ff-page h1, .ff-page h2, .ff-page h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; }
 body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 
-/* About Hero — full viewport, brand gradient, Faith Formers led, no photo */
+/* About Hero */
 .ff-about-hero {
-	min-height: 100vh;
 	width: 100%;
 	position: relative;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	text-align: center;
 	padding: 80px 24px 80px;
 	box-sizing: border-box;
 	background: #FAF7F2;
+}
+
+/* Parallax community photo strip */
+.ff-about-parallax {
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+	position: relative;
+}
+.ff-about-parallax__img {
+	width: 100%;
+	height: 140%;
+	top: -20%;
+	position: absolute;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+.ff-about-parallax__overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(26, 43, 74, 0.15);
 }
 .ff-about-hero__content {
 	position: relative;
@@ -432,13 +453,16 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 		</div>
 	</section>
 
+	<section class="ff-about-parallax">
+		<div class="ff-about-parallax__img"
+		     style="background-image: url('<?php echo esc_url( get_theme_mod( 'ff_about_community_photo', get_stylesheet_directory_uri() . '/assets/community-placeholder.jpg' ) ); ?>')">
+		</div>
+		<div class="ff-about-parallax__overlay"></div>
+	</section>
+
 	<section class="ff-about-story">
-		<div class="ff-about-story__hero-img">Community photo — parish gathering, not mass</div>
-		<!-- Block 1: image LEFT (full height, radius 0 left / 16px right), text RIGHT -->
+		<!-- Block 1: text only (portrait will come inline when photo is ready) -->
 		<div class="ff-about-story__block">
-			<div class="ff-about-story__img-wrap">
-				<div class="ff-about-story__img-placeholder"></div>
-			</div>
 			<div class="ff-about-story__content-wrap">
 				<div class="ff-about-story__content">
 					<h2>Anna's Story</h2>
