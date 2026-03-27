@@ -152,21 +152,25 @@ p {
 /* ═══════════════════════════════════════════════════════════
    NAVIGATION
    ═══════════════════════════════════════════════════════════ */
+
+/* Suppress any Kadence header rendering alongside ours */
+#masthead, .kadence-sticky-header { display: none !important; }
+
 .site-header {
-  background: rgba(245, 237, 224, .94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid rgba(125, 211, 192, .18);
+  background: rgba(245, 237, 224, .94) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+  border-bottom: 1px solid rgba(125, 211, 192, .18) !important;
 }
 
 .site-header .header-inner {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 0 var(--pad-x);
-  height: 60px;
+  height: 60px !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -174,8 +178,8 @@ p {
 
 .site-header .site-logo {
   font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 800;
+  font-size: 20px !important;
+  font-weight: 800 !important;
   color: var(--ff-ink);
   letter-spacing: -.5px;
 }
@@ -184,21 +188,21 @@ p {
 .main-navigation { display: flex; gap: 32px; }
 .main-navigation a {
   font-size: 13px;
-  font-weight: 500;
-  color: var(--ff-ink-mid);
+  font-weight: 500 !important;
+  color: #2B4C7E !important;
 }
-.main-navigation a:hover { color: var(--ff-mg); }
+.main-navigation a:hover { color: var(--ff-mg) !important; }
 
 .header-cta {
-  background: var(--ff-mg);
-  color: #fff;
+  background: var(--ff-mg) !important;
+  color: #fff !important;
   font-size: 11px;
   font-weight: 600;
   padding: 10px 24px;
-  border-radius: 100px;
+  border-radius: 100px !important;
   letter-spacing: .04em;
 }
-.header-cta:hover { background: #c01575; color: #fff; }
+.header-cta:hover { background: #c01575 !important; color: #fff !important; }
 
 /* ═══════════════════════════════════════════════════════════
    HERO
