@@ -120,7 +120,7 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 }
 
 /* Anna's Story — hero image, then alternate left/right blocks */
-.ff-about-story { background: #ffffff; padding: 0 24px 0; }
+.ff-about-story { background: #ffffff; padding: 0 24px 0; margin-top: 80px; }
 .ff-about-story__hero-img {
 	width: 100%;
 	height: 400px;
@@ -143,10 +143,13 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	align-items: stretch;
 }
 .ff-about-story__stat-wrap {
-	padding: 100px 60px;
 	display: flex;
-	align-items: center;
+	gap: 40px;
 	justify-content: center;
+	align-items: flex-start;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0;
 }
 .ff-about-story__img-wrap {
 	position: relative;
@@ -182,13 +185,14 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	margin: 0 0 1.25rem;
 }
 .ff-about-story__content p:last-child { margin-bottom: 0; }
-.ff-about-story__block--stat .ff-about-story__content p {
-	font-size: 22px;
-	color: #18160F;
-	font-weight: 600;
-	line-height: 1.9;
+.ff-about-story__block--stat {
+	display: block;
+	background: #F5EDE0;
+	padding: 80px 40px;
+	min-height: auto;
 }
 .ff-about-story__stat {
+	flex: 1;
 	text-align: center;
 	padding: 1rem 0;
 }
@@ -198,19 +202,17 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	font-weight: 900;
 	line-height: 1;
 	letter-spacing: 0.5px;
-	background: linear-gradient(135deg, #7DD3C0, #00BFFF, #E91E8C);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
+	color: #2B4C7E;
 	margin: 0 0 0.5rem;
 }
 .ff-about-story__stat-label {
 	font-family: 'Instrument Sans', sans-serif;
-	font-size: 18px;
-	font-weight: 600;
-	line-height: 1.9;
-	color: #18160F;
-	margin: 0;
+	font-size: 0.95rem;
+	font-weight: 500;
+	line-height: 1.5;
+	color: #5A5A6E;
+	margin-top: 8px;
+	margin-bottom: 0;
 }
 
 /* Her Work — larger cards, 80px icons, more padding */
@@ -476,12 +478,20 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 				</div>
 			</div>
 		</div>
-		<!-- Block 2: stat (30 Years) -->
+		<!-- Block 2: stats band -->
 		<div class="ff-about-story__block ff-about-story__block--stat">
 			<div class="ff-about-story__stat-wrap">
 				<div class="ff-about-story__stat">
 					<div class="ff-about-story__stat-value">30 Years</div>
 					<p class="ff-about-story__stat-label">in Catholic formation &amp; ministry</p>
+				</div>
+				<div class="ff-about-story__stat">
+					<div class="ff-about-story__stat-value">3</div>
+					<p class="ff-about-story__stat-label">Formation pillars — Heart, Home and Parish</p>
+				</div>
+				<div class="ff-about-story__stat">
+					<div class="ff-about-story__stat-value">100s</div>
+					<p class="ff-about-story__stat-label">of families and parishes served</p>
 				</div>
 			</div>
 		</div>
