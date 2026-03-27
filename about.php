@@ -340,16 +340,6 @@ get_header();
 			<p class="ff-about-hero__eyebrow">About Faith Formers</p>
 			<h1 class="ff-about-hero__headline">Formation that goes all the way down.</h1>
 			<p class="ff-about-hero__subtext">For the parish. For the home. For the heart. Faith Formers exists for the moments that actually change people.</p>
-			<div class="ff-about-hero__stats">
-				<div>
-					<span class="ff-about-hero__stat-num">30+</span>
-					<span class="ff-about-hero__stat-label">Years in formation</span>
-				</div>
-				<div>
-					<span class="ff-about-hero__stat-num">3</span>
-					<span class="ff-about-hero__stat-label">Formation pillars</span>
-				</div>
-			</div>
 		</div>
 	</section>
 
@@ -404,8 +394,8 @@ get_header();
 	<section class="ff-about-work">
 		<div class="ff-about-work__inner">
 			<div class="ff-about-work__header">
-				<h2 class="ff-about-work__heading">Her Work</h2>
-				<p class="ff-about-work__intro">Anna brings thirty years of frontline formation experience to everything she creates. Here's what that looks like in practice.</p>
+				<h2 class="ff-about-work__heading">Our Work</h2>
+				<p class="ff-about-work__intro">Anna brings thirty years of frontline formation experience to everything we create. Here's what that looks like in practice.</p>
 			</div>
 			<div class="ff-about-work__grid">
 				<div class="ff-about-work__card">
@@ -425,8 +415,8 @@ get_header();
 				</div>
 				<div class="ff-about-work__card">
 					<span class="ff-about-work__num">04</span>
-					<h3 class="ff-about-work__title">Curriculum Development</h3>
-					<p class="ff-about-work__desc">Liturgical-year resources, session plans, and family faith practices that parishes and families can use week to week. Rooted in the calendar, not content trends.</p>
+					<h3 class="ff-about-work__title">Spiritual Inspiration &amp; Resources</h3>
+					<p class="ff-about-work__desc">Weekly reflections, prayer guides, and formation content for anyone who wants their faith to go deeper than Sunday morning — wherever they are in the journey.</p>
 				</div>
 			</div>
 		</div>
