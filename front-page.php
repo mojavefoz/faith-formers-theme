@@ -17,7 +17,7 @@ get_header(); ?>
       <h1 class="ff-hero__h1">Faith that lives<br>in your <em>everyday.</em></h1>
       <p class="ff-hero__sub">Formation isn't just for Sunday morning. It belongs in the kitchen, on the hard days, through every season of life.</p>
       <div class="ff-hero__btns">
-        <a href="#ff-guide" class="ff-btn ff-btn--mg">Get the free guide</a>
+        <a data-formkit-toggle="0f497b7f18" href="https://faith-formers.kit.com/0f497b7f18" class="ff-btn ff-btn--mg">Subscribe</a>
         <a href="<?php echo esc_url( get_permalink( get_option('page_for_posts') ) ); ?>" class="ff-btn ff-btn--plain">Browse articles →</a>
       </div>
     </div>
@@ -147,7 +147,7 @@ get_header(); ?>
       <p class="ff-eyebrow" style="color:#FFFFFF;font-weight:700;opacity:1;">Free resource</p>
       <h2><?php echo esc_html( get_theme_mod( 'ff_featured_resource_title', 'Our One-Hour Retreat' ) ); ?></h2>
       <p class="ff-guide__sub" style="color:#FFFFFF;font-weight:600;opacity:1;"><?php echo esc_html( get_theme_mod( 'ff_featured_resource_desc', 'A retreat guide rooted in Lectio Divina — for anyone who wants a prayer life that actually holds. Yours free when you join.' ) ); ?></p>
-      <a href="<?php echo esc_url( get_theme_mod( 'ff_featured_resource_url', '#' ) ); ?>" style="display:inline-block;background:#FFFFFF;color:#E91E8C;font-family:'Instrument Sans',sans-serif;font-size:16px;font-weight:700;border-radius:100px;padding:16px 40px;text-decoration:none;transition:opacity 0.2s;">Get the Free Retreat Guide</a>
+      <a data-formkit-toggle="0f497b7f18" href="https://faith-formers.kit.com/0f497b7f18" style="display:inline-block;background:#FFFFFF;color:#E91E8C;font-family:'Instrument Sans',sans-serif;font-size:16px;font-weight:700;border-radius:100px;padding:16px 40px;text-decoration:none;transition:opacity 0.2s;">Subscribe</a>
       <p class="ff-guide__dm" style="color:#FFFFFF;font-weight:600;">Or DM <strong>HEART</strong> on Instagram for instant access.</p>
     </div>
   </section>

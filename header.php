@@ -119,7 +119,7 @@ body.home #ff-header:not(.scrolled) .ff-header-nav a.active { color: #E91E8C; }
       <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"<?php echo is_page( 'contact' ) ? ' class="active"' : ''; ?>>Contact</a>
     </nav>
 
-    <a href="<?php echo esc_url( home_url( '/#newsletter' ) ); ?>" class="ff-header-cta">Join Newsletter</a>
+    <a data-formkit-toggle="0f497b7f18" href="https://faith-formers.kit.com/0f497b7f18" class="ff-header-cta">Subscribe</a>
 
   </div>
 </header>

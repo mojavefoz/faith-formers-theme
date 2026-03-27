@@ -222,9 +222,7 @@ body.admin-bar .ff-single-hero { padding-top: calc(50vh * 0.5 + 32px) !important
 			<h2 class="ff-single-newsletter__title">Join the Community</h2>
 			<p class="ff-single-newsletter__text">Formation resources, family faith practices, and reflections for the interior life — delivered to your inbox.</p>
 			<div id="newsletter" class="ff-single-newsletter__embed">
-				<div style="text-align:center; display:flex; justify-content:center; align-items:center; flex-direction:column;">
-					<script async data-uid="6eb3da3edd" src="https://faith-formers.kit.com/6eb3da3edd/index.js"></script>
-				</div>
+				<a data-formkit-toggle="0f497b7f18" href="https://faith-formers.kit.com/0f497b7f18" style="display:inline-block;background:#FFFFFF;color:#18160F;font-family:'Instrument Sans',sans-serif;font-size:18px;font-weight:700;border-radius:100px;padding:16px 48px;text-decoration:none;transition:opacity 0.2s;">Subscribe</a>
 			</div>
 		</div>
 	</section>

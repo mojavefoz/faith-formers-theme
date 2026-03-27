@@ -385,10 +385,8 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 					</div>
 				</div>
 				<div class="ff-archive-sidebar__section ff-archive-sidebar__newsletter">
-					<h3 class="ff-archive-sidebar__heading">Join the community</h3>
-					<div class="ff-archive-newsletter-mini__embed">
-						<script async data-uid="6eb3da3edd" src="https://faith-formers.kit.com/6eb3da3edd/index.js"></script>
-					</div>
+					<h3 class="ff-archive-sidebar__heading">Subscribe</h3>
+					<a data-formkit-toggle="0f497b7f18" href="https://faith-formers.kit.com/0f497b7f18" style="display:inline-block;background:#1A1A2E;color:#FFFFFF;font-family:'Instrument Sans',sans-serif;font-size:15px;font-weight:700;border-radius:100px;padding:12px 28px;text-decoration:none;margin-top:0.5rem;transition:opacity 0.2s;">Subscribe</a>
 				</div>
 			</aside>
 		</div>
@@ -399,7 +397,7 @@ body.admin-bar .ff-archive-header { padding-top: 112px !important; }
 			<h2 class="ff-archive-newsletter__title">Join the Community</h2>
 			<p class="ff-archive-newsletter__text">Formation resources, family faith practices, and reflections for the interior life — delivered to your inbox.</p>
 			<div id="newsletter" class="ff-archive-newsletter__embed">
-				<script async data-uid="6eb3da3edd" src="https://faith-formers.kit.com/6eb3da3edd/index.js"></script>
+				<a data-formkit-toggle="0f497b7f18" href="https://faith-formers.kit.com/0f497b7f18" style="display:inline-block;background:#FFFFFF;color:#18160F;font-family:'Instrument Sans',sans-serif;font-size:18px;font-weight:700;border-radius:100px;padding:16px 48px;text-decoration:none;transition:opacity 0.2s;">Subscribe</a>
 			</div>
 		</div>
 	</section>

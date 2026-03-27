@@ -85,3 +85,11 @@ function faithformers_customize_featured_resource( $wp_customize ) {
 	) );
 }
 add_action( 'customize_register', 'faithformers_customize_featured_resource' );
+
+/**
+ * Load Kit modal script sitewide.
+ */
+function faithformers_kit_modal_script() {
+	echo '<script async data-uid="0f497b7f18" src="https://faith-formers.kit.com/0f497b7f18/index.js"></script>' . "\n";
+}
+add_action( 'wp_head', 'faithformers_kit_modal_script' );
