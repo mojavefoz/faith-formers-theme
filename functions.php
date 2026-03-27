@@ -95,6 +95,29 @@ function faithformers_customize_about_page( $wp_customize ) {
 		'priority' => 32,
 	) );
 
+	// Anna's portrait (hero split layout).
+	$wp_customize->add_setting( 'ff_about_portrait', array(
+		'default'           => '',
+		'sanitize_callback' => 'absint',
+	) );
+	$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'ff_about_portrait', array(
+		'label'     => __( 'Anna\'s Portrait (hero)', 'faithformers' ),
+		'section'   => 'faithformers_about_page',
+		'mime_type' => 'image',
+	) ) );
+
+	// Parallax strip toggle — off until community photo is ready.
+	$wp_customize->add_setting( 'ff_about_parallax_enabled', array(
+		'default'           => false,
+		'sanitize_callback' => 'rest_sanitize_boolean',
+	) );
+	$wp_customize->add_control( 'ff_about_parallax_enabled', array(
+		'label'   => __( 'Show parallax community photo strip', 'faithformers' ),
+		'section' => 'faithformers_about_page',
+		'type'    => 'checkbox',
+	) );
+
+	// Community photo used by the parallax strip.
 	$wp_customize->add_setting( 'ff_about_community_photo', array(
 		'default'           => '',
 		'sanitize_callback' => 'esc_url_raw',
