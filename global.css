@@ -155,6 +155,8 @@ p {
 
 /* Suppress any Kadence header rendering alongside ours */
 #masthead, .kadence-sticky-header { display: none !important; }
+/* Kadence adds padding-top to body for its sticky header — zero it out */
+body { padding-top: 0 !important; }
 
 .site-header {
   background: rgba(245, 237, 224, .94) !important;
