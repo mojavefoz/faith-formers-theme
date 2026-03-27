@@ -16,21 +16,20 @@
   height: 72px;
   background: #FAF7F2;
   box-shadow: 0 1px 0 rgba(0,0,0,.08);
-  transition: all 0.3s ease;
 }
 body.admin-bar #ff-header { top: 32px; }
 @media screen and (max-width: 782px) {
   body.admin-bar #ff-header { top: 46px; }
 }
 
-/* Homepage: transparent at top, cream after 80px scroll */
 body.home #ff-header {
-  background: transparent;
-  box-shadow: none;
-}
-body.home #ff-header.scrolled {
   background: #FAF7F2;
-  box-shadow: 0 1px 0 rgba(0,0,0,.08);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+}
+
+body:not(.home) #ff-header {
+  background: #FAF7F2;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08);
 }
 
 .ff-header-inner {
@@ -45,9 +44,7 @@ body.home #ff-header.scrolled {
 
 /* Logo */
 .ff-header-logo { flex-shrink: 0; display: flex; align-items: center; text-decoration: none; }
-.ff-header-logo img { height: 48px; width: auto; display: block; filter: none; transition: filter 0.3s ease; }
-/* Homepage transparent: invert logo to white */
-body.home #ff-header:not(.scrolled) .ff-header-logo img { filter: brightness(0) invert(1); }
+.ff-header-logo img { height: 48px; width: auto; display: block; }
 
 .ff-header-logo-text {
   font-family: 'Instrument Sans', sans-serif;
@@ -66,10 +63,6 @@ body.home #ff-header:not(.scrolled) .ff-header-logo img { filter: brightness(0) 
 }
 .ff-header-nav a:hover,
 .ff-header-nav a.active { color: #E91E8C; }
-/* Homepage transparent: white nav links */
-body.home #ff-header:not(.scrolled) .ff-header-nav a { color: #ffffff; }
-body.home #ff-header:not(.scrolled) .ff-header-nav a:hover,
-body.home #ff-header:not(.scrolled) .ff-header-nav a.active { color: #E91E8C; }
 
 /* CTA button */
 .ff-header-cta {
@@ -124,14 +117,3 @@ body.home #ff-header:not(.scrolled) .ff-header-nav a.active { color: #E91E8C; }
   </div>
 </header>
 
-<script>
-( function () {
-  var header = document.getElementById( 'ff-header' );
-  if ( ! header ) return;
-  function onScroll() {
-    header.classList.toggle( 'scrolled', window.scrollY > 80 );
-  }
-  window.addEventListener( 'scroll', onScroll, { passive: true } );
-  onScroll();
-} )();
-</script>
