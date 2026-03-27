@@ -461,8 +461,13 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 	</section>
 
 	<section class="ff-about-story">
-		<!-- Block 1: text only (portrait will come inline when photo is ready) -->
+		<!-- Block 1: portrait LEFT, story text RIGHT -->
 		<div class="ff-about-story__block">
+			<div class="ff-about-story__img-wrap">
+				<div class="ff-about-story__img-placeholder" style="background:#EDE3D0;border-radius:12px;min-height:480px;width:100%;display:flex;align-items:center;justify-content:center;">
+					<span style="color:#9B8E7E;font-size:0.875rem;text-align:center;">Anna's portrait — add image in Customizer</span>
+				</div>
+			</div>
 			<div class="ff-about-story__content-wrap">
 				<div class="ff-about-story__content">
 					<h2>Anna's Story</h2>
@@ -471,13 +476,8 @@ body.admin-bar .ff-about-hero { padding-top: 112px !important; }
 				</div>
 			</div>
 		</div>
-		<!-- Block 2: text LEFT (Thirty years...), stat RIGHT (30 Years) -->
+		<!-- Block 2: stat (30 Years) -->
 		<div class="ff-about-story__block ff-about-story__block--stat">
-			<div class="ff-about-story__content-wrap">
-				<div class="ff-about-story__content">
-					<p>Thirty years in. She's still surprised by what happens when people are given permission to go deeper. That surprise — that reverence for what formation actually does to people — is what drives everything at Faith Formers.</p>
-				</div>
-			</div>
 			<div class="ff-about-story__stat-wrap">
 				<div class="ff-about-story__stat">
 					<div class="ff-about-story__stat-value">30 Years</div>
