@@ -23,7 +23,7 @@ get_header(); ?>
     </div>
     <div class="ff-hero__media">
       <?php
-      $hero_img = get_theme_mod('ff_hero_image');
+      $hero_img = get_theme_mod('ff_hero_image', 'https://staging.faithformers.com/wp-content/uploads/2026/06/hero-anna-speaking.png');
       if ( $hero_img ) : ?>
         <img src="<?php echo esc_url($hero_img); ?>" alt="Anna Forsberg speaking" class="ff-hero__img">
       <?php else : ?>
@@ -42,7 +42,7 @@ get_header(); ?>
   <section class="ff-path-row ff-path-row--heart">
     <div class="ff-path-row__media ff-path-row__media--teal">
       <?php
-      $heart_img = get_theme_mod('ff_heart_image');
+      $heart_img = get_theme_mod('ff_heart_image', 'https://staging.faithformers.com/wp-content/uploads/2026/06/pillar-heart.png');
       if ( $heart_img ) : ?>
         <img src="<?php echo esc_url($heart_img); ?>" alt="Heart formation">
       <?php else : ?>
@@ -66,7 +66,7 @@ get_header(); ?>
   <section class="ff-path-row ff-path-row--home ff-path-row--flip">
     <div class="ff-path-row__media ff-path-row__media--blue">
       <?php
-      $home_img = get_theme_mod('ff_home_image');
+      $home_img = get_theme_mod('ff_home_image', 'https://staging.faithformers.com/wp-content/uploads/2026/06/pillar-home-scaled.png');
       if ( $home_img ) : ?>
         <img src="<?php echo esc_url($home_img); ?>" alt="Home formation">
       <?php else : ?>
@@ -90,7 +90,7 @@ get_header(); ?>
   <section class="ff-path-row ff-path-row--parish">
     <div class="ff-path-row__media ff-path-row__media--mg">
       <?php
-      $parish_img = get_theme_mod('ff_parish_image');
+      $parish_img = get_theme_mod('ff_parish_image', 'https://staging.faithformers.com/wp-content/uploads/2026/06/pillar-parish.png');
       if ( $parish_img ) : ?>
         <img src="<?php echo esc_url($parish_img); ?>" alt="Parish formation">
       <?php else : ?>
@@ -126,7 +126,7 @@ get_header(); ?>
       </div>
       <div class="ff-anna__photo" style="max-height:480px;min-height:0;">
         <?php
-        $anna_img = get_theme_mod('ff_anna_portrait');
+        $anna_img = get_theme_mod('ff_anna_portrait', 'https://staging.faithformers.com/wp-content/uploads/2026/06/anna-portrait-scaled.png');
         if ( $anna_img ) : ?>
           <img src="<?php echo esc_url($anna_img); ?>" alt="Anna Forsberg">
         <?php else : ?>
