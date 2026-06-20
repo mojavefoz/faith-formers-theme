@@ -142,3 +142,133 @@ function faithformers_kit_modal_script() {
 	echo '<script async data-uid="0f497b7f18" src="https://faith-formers.kit.com/0f497b7f18/index.js"></script>' . "\n";
 }
 add_action( 'wp_head', 'faithformers_kit_modal_script' );
+
+/**
+ * Site image URLs — Customizer-backed, with sensible defaults that point
+ * at the staging media library. front-page.php reads these via get_theme_mod
+ * for hero / heart / home / parish / anna portrait; faithformers_og_meta_tags
+ * uses ff_og_image as the social-share fallback.
+ */
+function faithformers_image_defaults() {
+	return array(
+		'ff_hero_image'    => 'https://staging.faithformers.com/wp-content/uploads/2026/06/hero-anna-speaking.png',
+		'ff_anna_portrait' => 'https://staging.faithformers.com/wp-content/uploads/2026/06/anna-portrait-scaled.png',
+		'ff_heart_image'   => 'https://staging.faithformers.com/wp-content/uploads/2026/06/pillar-heart.png',
+		'ff_home_image'    => 'https://staging.faithformers.com/wp-content/uploads/2026/06/pillar-home-scaled.png',
+		'ff_parish_image'  => 'https://staging.faithformers.com/wp-content/uploads/2026/06/pillar-parish.png',
+		'ff_og_image'      => 'https://staging.faithformers.com/wp-content/uploads/2026/06/og-default.png',
+	);
+}
+
+function faithformers_image_url( $key ) {
+	$defaults = faithformers_image_defaults();
+	$default  = isset( $defaults[ $key ] ) ? $defaults[ $key ] : '';
+	return get_theme_mod( $key, $default );
+}
+
+/**
+ * Customizer: image URL fields. Stored as URL strings so editors can paste a
+ * media-library URL without re-uploading; defaults populate the live site.
+ */
+function faithformers_customize_register_images( $wp_customize ) {
+	$wp_customize->add_section( 'faithformers_images', array(
+		'title'    => __( 'Faith Formers — Images', 'faithformers' ),
+		'priority' => 30,
+	) );
+
+	$fields = array(
+		'ff_hero_image'    => __( 'Hero image (Anna speaking)', 'faithformers' ),
+		'ff_anna_portrait' => __( 'Anna portrait (front-page Meet Anna)', 'faithformers' ),
+		'ff_heart_image'   => __( 'Pillar image — Heart', 'faithformers' ),
+		'ff_home_image'    => __( 'Pillar image — Home', 'faithformers' ),
+		'ff_parish_image'  => __( 'Pillar image — Parish', 'faithformers' ),
+		'ff_og_image'      => __( 'Default Open Graph image', 'faithformers' ),
+	);
+	$defaults = faithformers_image_defaults();
+
+	foreach ( $fields as $key => $label ) {
+		$wp_customize->add_setting( $key, array(
+			'default'           => isset( $defaults[ $key ] ) ? $defaults[ $key ] : '',
+			'sanitize_callback' => 'esc_url_raw',
+			'transport'         => 'refresh',
+		) );
+		$wp_customize->add_control( $key, array(
+			'label'   => $label,
+			'section' => 'faithformers_images',
+			'type'    => 'url',
+		) );
+	}
+}
+add_action( 'customize_register', 'faithformers_customize_register_images' );
+
+/**
+ * Open Graph + Twitter Card meta tags.
+ * Defers to Rank Math or Yoast if either is active.
+ * Falls back to ff_og_image (Customizer), then the site's custom logo.
+ */
+function faithformers_og_meta_tags() {
+	if ( defined( 'RANK_MATH_VERSION' ) || defined( 'WPSEO_VERSION' ) ) {
+		return;
+	}
+
+	global $post;
+
+	$site_name   = get_bloginfo( 'name' );
+	$og_type     = 'website';
+	$title       = get_bloginfo( 'name' );
+	$description = get_bloginfo( 'description' );
+	$image       = '';
+	$url         = home_url( '/' );
+
+	if ( is_singular() && isset( $post ) ) {
+		$og_type     = 'article';
+		$title       = get_the_title( $post );
+		$description = has_excerpt( $post )
+			? wp_strip_all_tags( get_the_excerpt( $post ) )
+			: wp_trim_words( wp_strip_all_tags( $post->post_content ), 30, '' );
+		$url         = get_permalink( $post );
+		if ( has_post_thumbnail( $post ) ) {
+			$img_data = wp_get_attachment_image_src( get_post_thumbnail_id( $post ), 'large' );
+			$image    = $img_data ? $img_data[0] : '';
+		}
+	} elseif ( is_category() ) {
+		$cat         = get_queried_object();
+		$title       = $cat->name . ' — ' . $site_name;
+		$description = wp_strip_all_tags( $cat->description ) ?: 'Catholic faith formation articles — ' . $cat->name;
+		$url         = get_category_link( $cat->term_id );
+	}
+
+	if ( ! $image ) {
+		$image = faithformers_image_url( 'ff_og_image' );
+	}
+	if ( ! $image ) {
+		$logo_id = get_theme_mod( 'custom_logo' );
+		if ( $logo_id ) {
+			$logo_src = wp_get_attachment_image_src( $logo_id, 'full' );
+			$image    = $logo_src ? $logo_src[0] : '';
+		}
+	}
+
+	echo "\n<!-- Open Graph -->\n";
+	echo '<meta property="og:site_name" content="' . esc_attr( $site_name ) . '">' . "\n";
+	echo '<meta property="og:type" content="' . esc_attr( $og_type ) . '">' . "\n";
+	echo '<meta property="og:title" content="' . esc_attr( $title ) . '">' . "\n";
+	if ( $description ) {
+		echo '<meta property="og:description" content="' . esc_attr( $description ) . '">' . "\n";
+	}
+	echo '<meta property="og:url" content="' . esc_url( $url ) . '">' . "\n";
+	if ( $image ) {
+		echo '<meta property="og:image" content="' . esc_url( $image ) . '">' . "\n";
+	}
+	echo "\n<!-- Twitter Card -->\n";
+	echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
+	echo '<meta name="twitter:title" content="' . esc_attr( $title ) . '">' . "\n";
+	if ( $description ) {
+		echo '<meta name="twitter:description" content="' . esc_attr( $description ) . '">' . "\n";
+	}
+	if ( $image ) {
+		echo '<meta name="twitter:image" content="' . esc_url( $image ) . '">' . "\n";
+	}
+	echo "\n";
+}
+add_action( 'wp_head', 'faithformers_og_meta_tags', 10 );
