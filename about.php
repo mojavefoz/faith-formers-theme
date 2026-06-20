@@ -325,7 +325,7 @@ get_header();
 		<div class="ff-about-hero__portrait">
 			<?php
 			$portrait_id  = get_theme_mod( 'ff_about_portrait' );
-			$portrait_url = $portrait_id ? wp_get_attachment_image_url( $portrait_id, 'large' ) : '';
+			$portrait_url = $portrait_id ? wp_get_attachment_image_url( $portrait_id, 'large' ) : 'https://staging.faithformers.com/wp-content/uploads/2026/06/anna-portrait-scaled.png';
 			if ( $portrait_url ) : ?>
 				<img src="<?php echo esc_url( $portrait_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) . ' — Anna Forsberg' ); ?>">
 			<?php else : ?>
