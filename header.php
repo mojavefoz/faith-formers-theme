@@ -3,6 +3,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="O84AZKQ5ULzbbJtB54rkzKLpwkJmBam9fUWBWUhNv3g" />
 <link rel="profile" href="https://gmpg.org/xfn/11">
 <?php wp_head(); ?>
 <style>
