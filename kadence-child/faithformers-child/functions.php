@@ -73,10 +73,10 @@ function faithformers_image_defaults() {
 	return array(
 		'ff_hero_image'    => 'https://staging.faithformers.com/wp-content/uploads/2026/06/hero-anna-speaking.png',
 		'ff_anna_portrait' => 'https://staging.faithformers.com/wp-content/uploads/2026/06/anna-portrait-scaled.png',
-		'ff_pillar_heart'  => 'https://staging.faithformers.com/wp-content/uploads/2026/06/pillar-heart.png',
-		'ff_pillar_home'   => 'https://staging.faithformers.com/wp-content/uploads/2026/06/pillar-home-scaled.png',
-		'ff_pillar_parish' => 'https://staging.faithformers.com/wp-content/uploads/2026/06/pillar-parish.png',
-		'ff_og_default'    => 'https://staging.faithformers.com/wp-content/uploads/2026/06/og-default.png',
+		'ff_heart_image'  => 'https://staging.faithformers.com/wp-content/uploads/2026/06/pillar-heart.png',
+		'ff_home_image'   => 'https://staging.faithformers.com/wp-content/uploads/2026/06/pillar-home-scaled.png',
+		'ff_parish_image' => 'https://staging.faithformers.com/wp-content/uploads/2026/06/pillar-parish.png',
+		'ff_og_image'    => 'https://staging.faithformers.com/wp-content/uploads/2026/06/og-default.png',
 	);
 }
 
@@ -99,10 +99,10 @@ function faithformers_customize_register_images( $wp_customize ) {
 	$fields = array(
 		'ff_hero_image'    => __( 'Hero image (Anna speaking)', 'faithformers' ),
 		'ff_anna_portrait' => __( 'Anna portrait (about page)', 'faithformers' ),
-		'ff_pillar_heart'  => __( 'Pillar image — Heart', 'faithformers' ),
-		'ff_pillar_home'   => __( 'Pillar image — Home', 'faithformers' ),
-		'ff_pillar_parish' => __( 'Pillar image — Parish', 'faithformers' ),
-		'ff_og_default'    => __( 'Default Open Graph image', 'faithformers' ),
+		'ff_heart_image'  => __( 'Pillar image — Heart', 'faithformers' ),
+		'ff_home_image'   => __( 'Pillar image — Home', 'faithformers' ),
+		'ff_parish_image' => __( 'Pillar image — Parish', 'faithformers' ),
+		'ff_og_image'    => __( 'Default Open Graph image', 'faithformers' ),
 	);
 	$defaults = faithformers_image_defaults();
 
@@ -129,9 +129,9 @@ add_action( 'customize_register', 'faithformers_customize_register_images' );
 function faithformers_image_css() {
 	$hero   = faithformers_image_url( 'ff_hero_image' );
 	$anna   = faithformers_image_url( 'ff_anna_portrait' );
-	$heart  = faithformers_image_url( 'ff_pillar_heart' );
-	$home   = faithformers_image_url( 'ff_pillar_home' );
-	$parish = faithformers_image_url( 'ff_pillar_parish' );
+	$heart  = faithformers_image_url( 'ff_heart_image' );
+	$home   = faithformers_image_url( 'ff_home_image' );
+	$parish = faithformers_image_url( 'ff_parish_image' );
 
 	$rules = array();
 
@@ -210,7 +210,7 @@ function faithformers_og_meta_tags() {
 
 	// Fallback image: branded OG default, then custom logo.
 	if ( ! $image ) {
-		$image = faithformers_image_url( 'ff_og_default' );
+		$image = faithformers_image_url( 'ff_og_image' );
 	}
 	if ( ! $image ) {
 		$logo_id = get_theme_mod( 'custom_logo' );
