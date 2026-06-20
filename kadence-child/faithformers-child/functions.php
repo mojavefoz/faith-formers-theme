@@ -66,6 +66,112 @@ function faithformers_schema_sitewide() {
 add_action( 'wp_head', 'faithformers_schema_sitewide', 5 );
 
 /**
+ * Site image URLs — Customizer-backed, with sensible defaults that point
+ * at the staging media library. Drives wp_head CSS injection and the OG fallback.
+ */
+function faithformers_image_defaults() {
+	return array(
+		'ff_hero_image'    => 'https://staging.faithformers.com/wp-content/uploads/2026/06/hero-anna-speaking.png',
+		'ff_anna_portrait' => 'https://staging.faithformers.com/wp-content/uploads/2026/06/anna-portrait-scaled.png',
+		'ff_pillar_heart'  => 'https://staging.faithformers.com/wp-content/uploads/2026/06/pillar-heart.png',
+		'ff_pillar_home'   => 'https://staging.faithformers.com/wp-content/uploads/2026/06/pillar-home-scaled.png',
+		'ff_pillar_parish' => 'https://staging.faithformers.com/wp-content/uploads/2026/06/pillar-parish.png',
+		'ff_og_default'    => 'https://staging.faithformers.com/wp-content/uploads/2026/06/og-default.png',
+	);
+}
+
+function faithformers_image_url( $key ) {
+	$defaults = faithformers_image_defaults();
+	$default  = isset( $defaults[ $key ] ) ? $defaults[ $key ] : '';
+	return get_theme_mod( $key, $default );
+}
+
+/**
+ * Customizer: image URL fields. Stored as URL strings so editors can paste a
+ * media-library URL without re-uploading; defaults populate the live site.
+ */
+function faithformers_customize_register_images( $wp_customize ) {
+	$wp_customize->add_section( 'faithformers_images', array(
+		'title'    => __( 'Faith Formers — Images', 'faithformers' ),
+		'priority' => 30,
+	) );
+
+	$fields = array(
+		'ff_hero_image'    => __( 'Hero image (Anna speaking)', 'faithformers' ),
+		'ff_anna_portrait' => __( 'Anna portrait (about page)', 'faithformers' ),
+		'ff_pillar_heart'  => __( 'Pillar image — Heart', 'faithformers' ),
+		'ff_pillar_home'   => __( 'Pillar image — Home', 'faithformers' ),
+		'ff_pillar_parish' => __( 'Pillar image — Parish', 'faithformers' ),
+		'ff_og_default'    => __( 'Default Open Graph image', 'faithformers' ),
+	);
+	$defaults = faithformers_image_defaults();
+
+	foreach ( $fields as $key => $label ) {
+		$wp_customize->add_setting( $key, array(
+			'default'           => isset( $defaults[ $key ] ) ? $defaults[ $key ] : '',
+			'sanitize_callback' => 'esc_url_raw',
+			'transport'         => 'refresh',
+		) );
+		$wp_customize->add_control( $key, array(
+			'label'   => $label,
+			'section' => 'faithformers_images',
+			'type'    => 'url',
+		) );
+	}
+}
+add_action( 'customize_register', 'faithformers_customize_register_images' );
+
+/**
+ * Inject background-image rules into the existing placeholder divs.
+ * Keeps template files untouched — the templates ship with placeholder text
+ * and dashed borders; these rules cover both with the real photography.
+ */
+function faithformers_image_css() {
+	$hero   = faithformers_image_url( 'ff_hero_image' );
+	$anna   = faithformers_image_url( 'ff_anna_portrait' );
+	$heart  = faithformers_image_url( 'ff_pillar_heart' );
+	$home   = faithformers_image_url( 'ff_pillar_home' );
+	$parish = faithformers_image_url( 'ff_pillar_parish' );
+
+	$rules = array();
+
+	if ( $hero ) {
+		$u = esc_url( $hero );
+		$rules[] = ".ff-hero__bg { background-image: url('{$u}'); background-size: cover; background-position: center; }";
+		$rules[] = ".ff-hero__photo { background: url('{$u}') center / cover no-repeat; border: none; color: transparent; }";
+	}
+
+	if ( $anna ) {
+		$u = esc_url( $anna );
+		$rules[] = ".ff-anna__photo { background: url('{$u}') center / cover no-repeat; color: transparent; }";
+		$rules[] = ".ff-anna__photo > * { display: none; }";
+		$rules[] = ".ff-about-hero__photo { background: url('{$u}') center / cover no-repeat; border: none; color: transparent; }";
+		$rules[] = ".ff-about-story__photo-placeholder { background: url('{$u}') center / cover no-repeat; border: none; color: transparent; }";
+	}
+
+	// Pillar blocks keep their brand color via multiply so titles stay legible on the photo.
+	if ( $parish ) {
+		$u = esc_url( $parish );
+		$rules[] = ".ff-showcase__block--parish { background-image: url('{$u}'); background-size: cover; background-position: center; background-blend-mode: multiply; }";
+	}
+	if ( $home ) {
+		$u = esc_url( $home );
+		$rules[] = ".ff-showcase__block--home { background-image: url('{$u}'); background-size: cover; background-position: center; background-blend-mode: multiply; }";
+	}
+	if ( $heart ) {
+		$u = esc_url( $heart );
+		$rules[] = ".ff-showcase__block--heart { background-image: url('{$u}'); background-size: cover; background-position: center; background-blend-mode: multiply; }";
+	}
+
+	if ( empty( $rules ) ) {
+		return;
+	}
+
+	echo "\n<style id=\"faithformers-images\">\n" . implode( "\n", $rules ) . "\n</style>\n";
+}
+add_action( 'wp_head', 'faithformers_image_css', 20 );
+
+/**
  * Open Graph + Twitter Card meta tags.
  * Defers to Rank Math or Yoast if either is active.
  */
@@ -102,7 +208,10 @@ function faithformers_og_meta_tags() {
 		$url         = get_category_link( $cat->term_id );
 	}
 
-	// Fallback image: custom logo.
+	// Fallback image: branded OG default, then custom logo.
+	if ( ! $image ) {
+		$image = faithformers_image_url( 'ff_og_default' );
+	}
 	if ( ! $image ) {
 		$logo_id = get_theme_mod( 'custom_logo' );
 		if ( $logo_id ) {
