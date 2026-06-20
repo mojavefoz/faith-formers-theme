@@ -48,7 +48,6 @@ get_header(); ?>
       <?php else : ?>
         <div class="ff-path-row__img-ph">Heart imagery</div>
       <?php endif; ?>
-      <span class="ff-path-row__num">01</span>
     </div>
     <div class="ff-path-row__text">
       <p class="ff-eyebrow ff-eyebrow--teal">Heart</p>
@@ -72,7 +71,6 @@ get_header(); ?>
       <?php else : ?>
         <div class="ff-path-row__img-ph">Home imagery</div>
       <?php endif; ?>
-      <span class="ff-path-row__num">02</span>
     </div>
     <div class="ff-path-row__text">
       <p class="ff-eyebrow ff-eyebrow--blue">Home</p>
@@ -96,7 +94,6 @@ get_header(); ?>
       <?php else : ?>
         <div class="ff-path-row__img-ph">Parish imagery</div>
       <?php endif; ?>
-      <span class="ff-path-row__num">03</span>
     </div>
     <div class="ff-path-row__text">
       <p class="ff-eyebrow ff-eyebrow--mg">Parish</p>
@@ -134,7 +131,6 @@ get_header(); ?>
             <span>Anna portrait<br><small>Add image in Customizer</small></span>
           </div>
         <?php endif; ?>
-        <div class="ff-anna__photo-accent"></div>
       </div>
     </div>
   </section>
