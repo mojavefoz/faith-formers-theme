@@ -115,7 +115,7 @@ get_header(); ?>
         <p>I'm a wife, mum, and Catholic formation nerd with a dual degree in theology and education from Leeds. I started my career teaching in Catholic schools — and somewhere along the way, teaching faith became my whole life's work.</p>
         <p>For years I've walked alongside families, parishes, and individuals helping them move from going-through-the-motions to genuinely on-fire faith. Not performance. Not perfection. Just real encounter with a living God.</p>
         <p>Faith Formers is where I bring all of it together — retreats, resources, and a community that takes this seriously.</p>
-        <a href="<?php echo esc_url( get_permalink( get_page_by_path('about') ) ); ?>" class="ff-anna__cta">Read Anna's full story →</a>
+        <a href="<?php echo esc_url( get_permalink( get_page_by_path('about-anna') ) ); ?>" class="ff-anna__cta">Read Anna's full story →</a>
         <blockquote class="ff-anna__quote">
           <p>"Formation isn't a program. It's a relationship with a person — Jesus."</p>
           <cite>— Anna Forsberg</cite>
